@@ -1,0 +1,39 @@
+.container {
+  display: grid;
+  grid-template-rows: 80vh min-content 40vw repeat(3, min-content);
+  grid-template-columns: [sidebar-start] 8rem [sidebar-end full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+}
+
+.sidebarLeft{
+  grid-row: 1 / -1;
+  background-color: darkred;
+}
+
+.sidebarRight{
+  grid-row: 1 / -1;
+  background-color: aqua;
+}
+
+.header{
+  background-color: cadetblue;
+}
+
+.about{
+  border-color: chocolate;
+}
+
+.skills {
+  background-color: darkcyan;
+}
+
+.works {
+  background-color: darkgoldenrod;
+}
+
+.contact {
+  background-color: darkgreen;
+}
+
+.footer {
+  background-color: darkgrey;
+}
