@@ -1,7 +1,7 @@
 .container {
   display: grid;
-  grid-template-rows: 80vh min-content 40vw repeat(3, min-content);
-  grid-template-columns: [sidebar-start] 8rem [sidebar-end full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+  grid-template-rows: 100vh 40vw repeat(4, min-content);
+  grid-template-columns: [sidebarL-start] 8rem [sidebarL-end full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end sidebarR-start] 8rem [sidebarR-end];
 }
 
 .sidebarLeft{
@@ -11,29 +11,42 @@
 
 .sidebarRight{
   grid-row: 1 / -1;
+  grid-column: 12 / 13;
   background-color: aqua;
 }
 
 .header{
+  grid-row: 1 / 2;
+  grid-column: 2 / 12;
   background-color: cadetblue;
 }
 
 .about{
-  border-color: chocolate;
+  grid-row: 2 / 3;
+  grid-column: center-start / center-end;
+  background-color: chocolate;
 }
 
 .skills {
+  grid-row: 3 / 4;
+  grid-column: center-start / center-end;
   background-color: darkcyan;
 }
 
 .works {
+  grid-row: 4 / 5;
+  grid-column: full-start / full-end;
   background-color: darkgoldenrod;
 }
 
 .contact {
+  grid-row: 5 / 6;
+  grid-column: full-start / full-end;
   background-color: darkgreen;
 }
 
 .footer {
+  grid-row: 6 / 7;
+  grid-column: full-start / full-end;
   background-color: darkgrey;
 }
