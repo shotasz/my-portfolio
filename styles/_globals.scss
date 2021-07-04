@@ -1,0 +1,41 @@
+//COLORS VARIABLES
+:root {
+--color-navy : #0a192f;
+--color-light-navy : #112240;
+--color-lightest-navy : #233554;
+--color-slate: #8892b0;
+--color-light-slate: #a8b2d1;
+--color-lightest-slate: #ccd6f6;
+--color-white: #e6f1ff;
+--color-green: #64ffda;
+--color-green-light: rgba(100, 255, 218, 0.1);
+
+
+--font-ubuntu: 'Ubuntu', sans-serif;
+--font-caveat: 'Caveat', cursive;
+--font-roboto: 'Roboto', sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  min-height: 100%;
+  font-family: var(--font-roboto);
+  font-size: 2rem;
+  font-weight: 400;
+  color: var(--color-slate);
+  line-height: 1.2;
+  background-color: var(--color-navy);
+}
