@@ -13,11 +13,56 @@ export default function Home() {
         <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet"/>
         <link href="https://fonts.googleapis.com/css2?family=Caveat&display=swap" rel="stylesheet"/>
         <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"/> 
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/s-logo.svg" />
       </Head>
 
       <div className={styles.sidebarLeft}> 
-        <h3>SIDEBAR LEFT</h3>
+        <nav>
+          <div>
+            <Image src="/s-logo.svg" alt="Icon Home" width={50} height={50} />
+          </div>
+
+          <ul>
+            <li>
+                <a href="#">
+                  <Image src="/005-home.svg" alt="Icon Home" width={33} height={30} />
+                </a>
+            </li>
+
+            <li>
+                <a href="#">
+                  <Image src="/004-user.svg" alt="Icon Home" width={33} height={30} />
+                </a>
+            </li>
+
+            <li>
+                <a href="#">
+                  <Image src="/003-settings.svg" alt="Icon Home" width={33} height={30} />
+                </a>
+            </li>
+
+            <li>
+                <a href="#">
+                  <Image src="/006-vision.svg" alt="Icon Home" width={33} height={30} />
+                </a>
+            </li>
+
+            <li>
+                <a href="#">
+                  <Image src="/002-email.svg" alt="Icon Home" width={33} height={30} />
+                </a>
+            </li>
+          </ul>
+
+          <div>
+            <span>
+              <Image src="/007-twitter.svg" alt="Icon Home" width={33} height={30} />
+            </span>
+            <span>
+              <Image src="/001-github.svg" alt="Icon Home" width={33} height={30} />
+            </span>
+          </div>
+        </nav>
       </div>
 
       <div className={styles.sidebarRight}> 
