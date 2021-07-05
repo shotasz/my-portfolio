@@ -1,6 +1,9 @@
 import Head from "next/head";
 import Image from "next/image";
-import styles from "../styles/_Home.module.scss";
+import styles from "../styles/Home.module.scss";
+
+import { Header } from "../components/header";
+import { Sideleft } from "../components/sideleft";
 
 export default function Home() {
   return (
@@ -16,81 +19,13 @@ export default function Home() {
         <link rel="icon" href="/s-logo.svg" />
       </Head>
 
-      <div className={styles.sidebarLeft}> 
-        <nav>
-          <div>
-            <Image src="/s-logo.svg" alt="Icon Home" width={50} height={50} />
-          </div>
-
-          <ul>
-            <li>
-                <a href="#">
-                  <Image src="/005-home.svg" alt="Icon Home" width={33} height={30} />
-                </a>
-            </li>
-
-            <li>
-                <a href="#">
-                  <Image src="/004-user.svg" alt="Icon Home" width={33} height={30} />
-                </a>
-            </li>
-
-            <li>
-                <a href="#">
-                  <Image src="/003-settings.svg" alt="Icon Home" width={33} height={30} />
-                </a>
-            </li>
-
-            <li>
-                <a href="#">
-                  <Image src="/006-vision.svg" alt="Icon Home" width={33} height={30} />
-                </a>
-            </li>
-
-            <li>
-                <a href="#">
-                  <Image src="/002-email.svg" alt="Icon Home" width={33} height={30} />
-                </a>
-            </li>
-          </ul>
-
-          <div>
-            <span>
-              <Image src="/007-twitter.svg" alt="Icon Home" width={33} height={30} />
-            </span>
-            <span>
-              <Image src="/001-github.svg" alt="Icon Home" width={33} height={30} />
-            </span>
-          </div>
-        </nav>
-      </div>
+      <Sideleft />
 
       <div className={styles.sidebarRight}> 
         <h3>SIDEBAR RIGHT</h3>
       </div>
 
-      <header className={styles.header}>
-        <span className={styles.header__html_start}>&lt;html&gt;</span>
-        <span className={styles.header__body_start}>&lt;body&gt;</span>
-        <span className={styles.header__header_start}>&lt;header&gt;</span>
-        <span className={styles.header__h1_start}>&lt;h1&gt;</span>
-
-        <h1>Hi,<br />I'm <i>S</i>hota,<br />web developer.</h1>
-
-        <span className={styles.header__h1_end}>&lt;/h1&gt;</span>
-
-        <p>Front End Developer / Javascript / React</p>
-
-        <span className={styles.header__btn_start}>&lt;button&gt;</span>
-
-        <button className={styles.btn}>CONTACT ME</button>
-
-        <span className={styles.header__btn_end}>&lt;/button&gt;</span>
-        <span className={styles.header__header_end}>&lt;/header&gt;</span>
-
-        <div className={styles.header__s1}>S</div>
-        <div className={styles.header__s2}>S</div>
-      </header>
+      <Header />
 
       <section className={styles.about}>
         <h2>SECTION 1</h2> 
