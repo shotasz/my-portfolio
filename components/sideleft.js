@@ -1,5 +1,12 @@
 import styles from "../styles/Sideleft.module.scss";
 import Image from "next/image";
+import IconHome from "./icons/home";
+import IconUser from "./icons/user";
+import IconSettings from "./icons/settings";
+import IconVision from "./icons/vision";
+import IconEmail from "./icons/email";
+import IconTwitter from "./icons/twitter";
+import IconGithub from "./icons/github";
 
 export function Sideleft() {
   return (
@@ -11,63 +18,46 @@ export function Sideleft() {
       <ul className={styles.navigation__list}>
         <li>
           <a href="#">
-            <Image src="/005-home.svg" alt="Icon Home" width={33} height={30} />
+            <IconHome />
           </a>
         </li>
 
         <li>
           <a href="#">
-            <Image src="/004-user.svg" alt="Icon Home" width={33} height={30} />
+            <IconUser />
           </a>
         </li>
 
         <li>
           <a href="#">
-            <Image
-              src="/003-settings.svg"
-              alt="Icon Home"
-              width={33}
-              height={30}
-            />
+            <IconSettings />
           </a>
         </li>
 
         <li>
           <a href="#">
-            <Image
-              src="/006-vision.svg"
-              alt="Icon Home"
-              width={33}
-              height={30}
-            />
+            <IconVision />
           </a>
         </li>
 
         <li>
           <a href="#">
-            <Image
-              src="/002-email.svg"
-              alt="Icon Home"
-              width={33}
-              height={30}
-            />
+            <IconEmail />
+          </a>
+        </li>
+
+        <li>
+          <a href="#">
+            <IconTwitter />
+          </a>
+        </li>
+
+        <li>
+          <a href="#">
+            <IconGithub />
           </a>
         </li>
       </ul>
-
-      <div>
-        <span>
-          <Image
-            src="/007-twitter.svg"
-            alt="Icon Home"
-            width={33}
-            height={30}
-          />
-        </span>
-        <span>
-          <Image src="/001-github.svg" alt="Icon Home" width={33} height={30} />
-        </span>
-      </div>
     </nav>
   );
 }
