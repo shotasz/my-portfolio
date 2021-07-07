@@ -7,12 +7,13 @@ import IconVision from "./icons/vision";
 import IconEmail from "./icons/email";
 import IconTwitter from "./icons/twitter";
 import IconGithub from "./icons/github";
+import HeaderLogo from "./icons/s-logo";
 
 export function Sideleft() {
   return (
     <nav className={styles.navigation}>
       <div className={styles.navigation__logo}>
-        <Image src="/s-logo.svg" alt="Icon Home" width={80} height={80} />
+        <HeaderLogo />
       </div>
 
       <ul className={styles.navigation__list}>

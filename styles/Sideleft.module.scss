@@ -5,6 +5,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    color: var(--color-green);
   }
 
   &__list {
@@ -17,9 +18,5 @@
     a {
       color: var(--color-green);
     }
-  }
-
-  a {
-    color: var(--color-green);
   }
 }
