@@ -46,19 +46,17 @@ export function Sideleft() {
             <IconEmail />
           </a>
         </li>
-
-        <li>
-          <a href="#">
-            <IconTwitter />
-          </a>
-        </li>
-
-        <li>
-          <a href="#">
-            <IconGithub />
-          </a>
-        </li>
       </ul>
+
+      <div className={styles.navigation__sns}>
+        <a href="#">
+          <IconTwitter />
+        </a>
+
+        <a href="#">
+          <IconGithub />
+        </a>
+      </div>
     </nav>
   );
 }

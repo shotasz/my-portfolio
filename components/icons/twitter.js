@@ -5,8 +5,8 @@ const IconTwitter = () => (
     id="regular"
     enable-background="new 0 0 24 24"
     viewBox="0 0 24 24"
-    height="30px"
-    width="30px"
+    height="23px"
+    width="23px"
     xmlns="http://www.w3.org/2000/svg"
   >
     <path
