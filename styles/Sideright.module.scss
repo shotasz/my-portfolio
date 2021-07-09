@@ -1,5 +1,36 @@
-.sidebarRight{
-    grid-row: 1 / -1;
-    grid-column: 12 / 13;
-    background-color: aqua;
+.sidebarRight {
+  grid-row: 1 / -1;
+  grid-column: 12 / 13;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  -webkit-box-align: center;
+  align-items: center;
+  justify-content: end;
+  position: relative;
+
+  a {
+    cursor: pointer;
+    letter-spacing: 2px;
+    font-size: 1.4rem;
+    display: inline-block;
+    text-transform: none;
+    text-decoration: none;
+    position: relative;
+
+    writing-mode: vertical-rl;
+    -webkit-writing-mode: vertical-rl;
+    -ms-writing-mode: tb-rl;
   }
+
+  &::after {
+    content: "";
+    display: block;
+    width: 1px;
+    height: 10rem;
+    background-color: var(--color-slate);
+
+    margin-top: 1.5rem;
+  }
+}
