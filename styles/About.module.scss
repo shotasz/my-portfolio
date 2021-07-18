@@ -1,0 +1,96 @@
+.about {
+  grid-row: 2 / 3;
+  grid-column: full-start / full-end;
+  margin: 8rem 4.4rem;
+  align-items: center;
+
+  display: grid;
+  grid-template-rows: repeat(8, 1fr);
+  grid-template-columns: repeat(2, minmax(min-content, max-content)) 1fr;
+  grid-row-gap: 2rem;
+
+  span {
+    font-family: var(--font-caveat);
+    font-size: 1.8rem;
+    color: var(--color-slate);
+  }
+
+  &__section_start {
+    grid-row: 1 / 2;
+    grid-column: 1 / 2;
+  }
+
+  &__h2_start {
+    grid-row: 2 / 3;
+    grid-column: 2 / 3;
+  }
+
+  h2 {
+    grid-row: 3 / 4;
+    grid-column: 2 / 3;
+
+    font-family: var(--font-ubuntu);
+    font-weight: 700;
+    color: var(--color-white);
+    font-size: 3.5rem;
+
+    &::before {
+      content: "01.";
+      display: inline-block;
+      font-family: var(--font-ubuntu);
+      font-weight: 400;
+      color: var(--color-green);
+      font-size: 2.5rem;
+      margin-right: 1rem;
+    }
+
+    &::after {
+      content: "";
+      display: inline-block;
+      height: 1px;
+      width: 30rem;
+      background-color: var(--color-slate);
+      position: relative;
+      top: -1rem;
+      margin-left: 2rem;
+    }
+  }
+
+  &__h2_end {
+    grid-row: 4 / 5;
+    grid-column: 2 / 3;
+  }
+
+  &__p_start {
+    grid-row: 5 / 6;
+    grid-column: 2 / 3;
+  }
+
+  p {
+    grid-row: 6 / 7;
+    grid-column: 2 / 3;
+
+    font-family: var(--font-ubuntu);
+    font-weight: 300;
+    color: var(--color-lightest-slate);
+    font-size: 1.6rem;
+    line-height: 29px;
+    margin-left: 4.4rem;
+  }
+
+  i {
+    font-style: normal;
+    font-weight: 500;
+    color: var(--color-green);
+  }
+
+  &__p_end {
+    grid-row: 7 / 8;
+    grid-column: 2 / 3;
+  }
+
+  &__section_end {
+    grid-row: 8 / 9;
+    grid-column: 1 / 2;
+  }
+}

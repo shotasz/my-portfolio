@@ -18,10 +18,18 @@
     text-transform: none;
     text-decoration: none;
     position: relative;
+    transition: var(--transition);
+    padding: 0.8rem;
 
     writing-mode: vertical-rl;
     -webkit-writing-mode: vertical-rl;
     -ms-writing-mode: tb-rl;
+
+    &:hover,
+    &:focus {
+      transform: translateY(-3px);
+      color: var(--color-green);
+    }
   }
 
   &::after {

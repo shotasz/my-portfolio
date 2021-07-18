@@ -20,7 +20,14 @@
       width: 100%;
       height: 100%;
       padding-top: 1.2rem;
-      color: var(--color-green);
+      color: var(--color-slate);
+      transition: var(--transition);
+
+      &:hover,
+      &:focus {
+        color: var(--color-green);
+        transform: translateY(-3px);
+      }
     }
   }
 
@@ -33,8 +40,15 @@
     margin-top: 12rem;
 
     a {
-      color: var(--color-green);
+      color: var(--color-slate);
       padding-top: 1.2rem;
+      transition: var(--transition);
+
+      &:hover,
+      &:focus {
+        color: var(--color-green);
+        transform: translateY(-3px);
+      }
     }
   }
 }
