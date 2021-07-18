@@ -1,4 +1,5 @@
 import styles from "../styles/Home.module.scss";
+import Image from "next/image";
 
 import { Headline } from "../components/headline";
 import { Header } from "../components/header";

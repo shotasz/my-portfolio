@@ -1,6 +1,6 @@
 .sidebarRight {
   grid-row: 1 / -1;
-  grid-column: 12 / 13;
+  grid-column: sidebarR-start / sidebarR-end;
   height: 100vh;
 
   display: flex;

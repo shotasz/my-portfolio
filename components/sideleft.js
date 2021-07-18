@@ -1,5 +1,4 @@
 import styles from "../styles/Sideleft.module.scss";
-import Image from "next/image";
 import IconHome from "./icons/home";
 import IconUser from "./icons/user";
 import IconSettings from "./icons/settings";

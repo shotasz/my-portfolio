@@ -2,12 +2,73 @@
   grid-row: 2 / 3;
   grid-column: full-start / full-end;
   margin: 8rem 4.4rem;
+  height: 80vh;
   align-items: center;
 
   display: grid;
   grid-template-rows: repeat(8, 1fr);
-  grid-template-columns: repeat(2, minmax(min-content, max-content)) 1fr;
+  grid-template-columns: minmax(min-content, max-content) repeat(
+      2,
+      minmax(30rem, 1fr)
+    );
   grid-row-gap: 2rem;
+
+  &__img {
+    grid-row: 1 / -1;
+    grid-column: 3 / 4;
+    align-self: center;
+    justify-self: center;
+    position: relative;
+    display: block;
+
+    &::before {
+      content: "";
+      display: block;
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      transition: var(--transition);
+      background-color: var(--color-navy);
+      box-shadow: 0 1rem 3rem -1rem var(--color-navy);
+    }
+
+    &::after {
+      content: "";
+      display: block;
+      height: 100%;
+      width: 100%;
+      border: 3px solid var(--color-green);
+      border-radius: 1rem;
+      z-index: -1;
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      transition: var(--transition);
+    }
+
+    &:hover,
+    &:focus {
+      background-color: transparent;
+      outline: 0px;
+      //transform: scale(1.02);
+
+      &:after {
+        top: 15px;
+        left: 15px;
+      }
+    }
+  }
+
+  img {
+    height: 100%;
+    width: 25rem;
+    object-fit: cover;
+    border-radius: 1rem;
+    background-color: var(--color-green);
+    filter: opacity(0.8);
+  }
 
   span {
     font-family: var(--font-caveat);
@@ -34,25 +95,25 @@
     color: var(--color-white);
     font-size: 3.5rem;
 
+    display: grid;
+    grid-template-columns: repeat(2, max-content) 1fr;
+    grid-column-gap: 1.5rem;
+    align-items: center;
+
     &::before {
       content: "01.";
-      display: inline-block;
+      display: block;
       font-family: var(--font-ubuntu);
       font-weight: 400;
       color: var(--color-green);
       font-size: 2.5rem;
-      margin-right: 1rem;
     }
 
     &::after {
       content: "";
-      display: inline-block;
+      display: block;
       height: 1px;
-      width: 30rem;
       background-color: var(--color-slate);
-      position: relative;
-      top: -1rem;
-      margin-left: 2rem;
     }
   }
 
