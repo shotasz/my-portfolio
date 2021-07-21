@@ -50,10 +50,6 @@
 
     &:hover,
     &:focus {
-      background-color: transparent;
-      outline: 0px;
-      //transform: scale(1.02);
-
       &:after {
         top: 15px;
         left: 15px;
@@ -68,6 +64,14 @@
     border-radius: 1rem;
     background-color: var(--color-green);
     filter: opacity(0.8);
+    transition: var(--transition);
+
+    &:hover,
+    &:focus {
+      background-color: transparent;
+      outline: 0px;
+      filter: none;
+    }
   }
 
   span {
@@ -98,7 +102,7 @@
     display: grid;
     grid-template-columns: repeat(2, max-content) 1fr;
     grid-column-gap: 1.5rem;
-    align-items: center;
+    align-items: flex-end;
 
     &::before {
       content: "01.";
@@ -114,6 +118,7 @@
       display: block;
       height: 1px;
       background-color: var(--color-slate);
+      align-self: center;
     }
   }
 
@@ -135,13 +140,15 @@
     font-weight: 300;
     color: var(--color-lightest-slate);
     font-size: 1.6rem;
-    line-height: 29px;
+    letter-spacing: 0.2rem;
+    line-height: 3rem;
     margin-left: 4.4rem;
   }
 
   i {
-    font-style: normal;
-    font-weight: 500;
+    font-style: var(--font-ubuntu);
+    font-weight: 700;
+    font-size: 1.8rem;
     color: var(--color-green);
   }
 
