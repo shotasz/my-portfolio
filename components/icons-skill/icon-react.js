@@ -1,12 +1,7 @@
 import React from "react";
 
 const IconReact = () => (
-  <svg
-    viewBox="-25 0 445 445.6"
-    width="100"
-    height="100"
-    xmlns="http://www.w3.org/2000/svg"
-  >
+  <svg viewBox="-25 0 445 445.6" height="90" xmlns="http://www.w3.org/2000/svg">
     <linearGradient id="a">
       <stop offset="0" stop-color="#00efd1" />
       <stop offset="1" stop-color="#00acea" />

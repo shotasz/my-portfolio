@@ -20,6 +20,10 @@ export function Headline() {
         href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
         rel="stylesheet"
       />
+      <link
+        href="https://fonts.googleapis.com/css2?family=Carter+One&display=swap"
+        rel="stylesheet"
+      />
       <link rel="icon" href="/s-logo.svg" />
     </Head>
   );
