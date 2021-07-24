@@ -17,7 +17,9 @@
     justify-self: start;
   }
 
-  @include spanCaveat;
+  span {
+    @include spanCaveat;
+  }
 
   i {
     font-style: normal;

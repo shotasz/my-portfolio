@@ -24,17 +24,14 @@ export function Works() {
           <h4>Featured Project</h4>
           <h3>Kondatte App</h3>
           <p>
-            献立アプリケーション
-            <br />
             ユーザーがアプリ内で自分用の献立リストを作ることができるアプリ。
-            <br />
             新規登録はもちろんのこと、過去に作った献立メニューを検索したり、
-            <br />
             好みが変わって献立を編集したり、カロリー表示も確認できるアプリ。
-            <br />
           </p>
-          <span>Next.js</span>
-          <span>Sass</span>
+          <ul>
+            <li>Next.js</li>
+            <li>Sass</li>
+          </ul>
           <div>
             <IconGithub />
             <IconLink />

@@ -60,20 +60,7 @@
   }
 
   img {
-    height: 100%;
-    width: 25rem;
-    object-fit: cover;
-    border-radius: 1rem;
-    background-color: var(--color-green);
-    filter: opacity(0.8);
-    transition: var(--transition);
-
-    &:hover,
-    &:focus {
-      background-color: transparent;
-      outline: 0px;
-      filter: none;
-    }
+    @include image(25rem);
   }
 
   @include spanCaveat;
@@ -108,6 +95,8 @@
   p {
     grid-row: 6 / 7;
     grid-column: 2 / 3;
+    letter-spacing: 0.2rem;
+    line-height: 3rem;
     margin-left: 4.4rem;
 
     @include paragraph;

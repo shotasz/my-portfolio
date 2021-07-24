@@ -15,7 +15,9 @@
   grid-row-gap: 2rem;
   align-items: center;
 
-  @include spanCaveat;
+  span {
+    @include spanCaveat;
+  }
 
   &__section_start {
     grid-row: 1 / 2;

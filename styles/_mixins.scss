@@ -23,6 +23,23 @@
   }
 }
 
+@mixin image($width) {
+  height: 100%;
+  width: $width;
+  object-fit: cover;
+  border-radius: 1rem;
+  background-color: var(--color-green);
+  filter: opacity(0.8);
+  transition: var(--transition);
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    background-color: transparent;
+    filter: none;
+  }
+}
+
 @mixin heading1 {
   font-family: var(--font-ubuntu);
   font-weight: 700;
@@ -75,11 +92,9 @@
 }
 
 @mixin spanCaveat {
-  span {
-    font-family: var(--font-caveat);
-    font-size: 1.8rem;
-    color: var(--color-slate);
-  }
+  font-family: var(--font-caveat);
+  font-size: 1.8rem;
+  color: var(--color-slate);
 }
 
 @mixin paragraph {
@@ -87,8 +102,6 @@
   font-weight: 300;
   color: var(--color-lightest-slate);
   font-size: 1.6rem;
-  letter-spacing: 0.2rem;
-  line-height: 3rem;
 }
 
 @mixin btnDesign {

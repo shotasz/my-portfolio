@@ -3,8 +3,8 @@ import React from "react";
 const IconReact = () => (
   <svg viewBox="-25 0 445 445.6" height="90" xmlns="http://www.w3.org/2000/svg">
     <linearGradient id="a">
-      <stop offset="0" stop-color="#00efd1" />
-      <stop offset="1" stop-color="#00acea" />
+      <stop offset="0" stopColor="#00efd1" />
+      <stop offset="1" stopColor="#00acea" />
     </linearGradient>
     <linearGradient
       id="b"
