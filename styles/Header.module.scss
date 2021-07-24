@@ -1,3 +1,5 @@
+@import "mixins";
+
 .header {
   display: grid;
   grid-template-rows: repeat(10, 1fr);
@@ -15,11 +17,7 @@
     justify-self: start;
   }
 
-  span {
-    font-family: var(--font-caveat);
-    font-size: 1.8rem;
-    color: var(--color-slate);
-  }
+  @include spanCaveat;
 
   i {
     font-style: normal;
@@ -51,24 +49,22 @@
     grid-column: 4 / 5;
     grid-row: 5 / 6;
     align-self: flex-end;
-    margin-left: 3rem;
+    margin-left: -15rem;
   }
 
   h1 {
     grid-column: 3 / 4;
     grid-row: 5 / 6;
-    font-family: var(--font-ubuntu);
-    font-weight: 700;
-    color: var(--color-white);
-    font-size: 5rem;
+
+    @include heading1;
   }
 
   p {
     grid-column: 3 / 4;
     grid-row: 6 / 7;
-    font-size: 2rem;
+    font-size: 3rem;
     font-family: var(--font-ubuntu);
-    font-weight: 300;
+    font-weight: 400;
     color: var(--color-light-slate);
     margin-top: 1rem;
   }
@@ -124,26 +120,4 @@
   }
 }
 
-.btn {
-  display: inline-block;
-  cursor: pointer;
-  font-size: 2rem;
-  letter-spacing: 5px;
-  border: 3px solid var(--color-green);
-  border-radius: 1rem;
-  color: var(--color-green);
-  padding: 1.6rem 2.8rem;
-  text-decoration: none;
-  background-color: transparent;
-  position: relative;
-  transition: var(--transition);
-
-  &:hover,
-  &:focus {
-    background-color: var(--color-green-light);
-  }
-
-  &:active {
-    transform: translateY(3px);
-  }
-}
+@include btnDesign;

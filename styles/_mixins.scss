@@ -22,3 +22,97 @@
     border-radius: 3px 0 0 3px;
   }
 }
+
+@mixin heading1 {
+  font-family: var(--font-ubuntu);
+  font-weight: 700;
+  color: var(--color-white);
+  font-size: 5rem;
+}
+
+@mixin heading2 {
+  font-family: var(--font-ubuntu);
+  font-weight: 700;
+  color: var(--color-white);
+  font-size: 3.5rem;
+  margin-bottom: 0.8rem;
+
+  display: grid;
+  grid-template-columns: repeat(2, max-content) 1fr;
+  grid-column-gap: 1.5rem;
+  align-items: flex-end;
+
+  &::before {
+    content: "01.";
+    display: block;
+    font-family: var(--font-ubuntu);
+    font-weight: 400;
+    color: var(--color-green);
+    font-size: 2.5rem;
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    height: 1px;
+    background-color: var(--color-slate);
+    align-self: center;
+  }
+}
+
+@mixin heading3 {
+  font-family: var(--font-ubuntu);
+  font-weight: 500;
+  color: var(--color-white);
+  font-size: 3.4rem;
+}
+
+@mixin heading4 {
+  font-family: var(--font-ubuntu);
+  font-weight: 300;
+  color: var(--color-green);
+  font-size: 2.4rem;
+}
+
+@mixin spanCaveat {
+  span {
+    font-family: var(--font-caveat);
+    font-size: 1.8rem;
+    color: var(--color-slate);
+  }
+}
+
+@mixin paragraph {
+  font-family: var(--font-ubuntu);
+  font-weight: 300;
+  color: var(--color-lightest-slate);
+  font-size: 1.6rem;
+  letter-spacing: 0.2rem;
+  line-height: 3rem;
+}
+
+@mixin btnDesign {
+  .btn {
+    display: inline-block;
+    cursor: pointer;
+    font-size: 2rem;
+    letter-spacing: 5px;
+    border: 3px solid var(--color-green);
+    border-radius: 1rem;
+    color: var(--color-green);
+    padding: 1.6rem 2.8rem;
+    text-decoration: none;
+    background-color: transparent;
+    position: relative;
+    transition: var(--transition);
+
+    &:hover,
+    &:focus {
+      background-color: var(--color-green-light);
+    }
+
+    &:active {
+      transform: translateY(3px);
+    }
+  }
+}
