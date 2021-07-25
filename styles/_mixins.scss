@@ -47,7 +47,7 @@
   font-size: 5rem;
 }
 
-@mixin heading2 {
+@mixin heading2($number) {
   font-family: var(--font-ubuntu);
   font-weight: 700;
   color: var(--color-white);
@@ -60,7 +60,7 @@
   align-items: flex-end;
 
   &::before {
-    content: "01.";
+    content: $number;
     display: block;
     font-family: var(--font-ubuntu);
     font-weight: 400;

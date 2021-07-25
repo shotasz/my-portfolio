@@ -31,7 +31,7 @@
     @include btnDesign;
 
     h2 {
-      @include heading2;
+      @include heading2("04.");
     }
 
     span {
