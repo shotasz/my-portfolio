@@ -1,5 +1,52 @@
+@import "mixins";
+
 .footer {
   grid-row: 6 / 7;
   grid-column: full-start / full-end;
-  background-color: darkgrey;
+  margin: 4rem 4.4rem;
+  margin-bottom: 1rem;
+
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  grid-template-rows: repeat(5, min-content);
+  grid-gap: 2rem;
+
+  span {
+    @include spanCaveat;
+  }
+
+  &__footer_start {
+    grid-row: 1 / 2;
+  }
+
+  &__content {
+    grid-row: 2 / 3;
+    grid-column: 2 / 3;
+    text-align: center;
+
+    p {
+      @include paragraph;
+    }
+
+    a {
+      &:hover,
+      &:focus {
+        color: var(--color-green);
+      }
+    }
+  }
+
+  &__footer_end {
+    grid-row: 3 / 4;
+  }
+
+  &__body_end {
+    grid-row: 4 / 5;
+    margin-left: -5rem;
+  }
+
+  &__html_end {
+    grid-row: 5 / 6;
+    margin-left: -5rem;
+  }
 }
