@@ -1,5 +1,46 @@
+@import "mixins";
+
 .contact {
   grid-row: 5 / 6;
   grid-column: full-start / full-end;
-  background-color: darkgreen;
+  margin: 8rem 0;
+
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  grid-template-rows: repeat(3, min-content);
+
+  span {
+    margin-top: 2rem;
+    @include spanCaveat;
+  }
+
+  &__section_start {
+    grid-row: 1 / 2;
+  }
+
+  &__content {
+    grid-row: 2 / 3;
+    grid-column: 2 / -1;
+    margin: 8rem auto;
+
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-direction: column;
+
+    @include btnDesign;
+
+    h2 {
+      @include heading2;
+    }
+
+    span {
+      margin-bottom: 2rem;
+    }
+  }
+
+  &__section_end {
+    grid-row: 3 / -1;
+    align-self: flex-end;
+  }
 }
