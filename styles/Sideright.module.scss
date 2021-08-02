@@ -4,11 +4,13 @@
   height: 100vh;
 
   display: flex;
-  flex-direction: column;
-  -webkit-box-align: center;
   align-items: center;
-  justify-content: end;
+  justify-content: flex-end;
   position: relative;
+
+  writing-mode: vertical-rl;
+  -webkit-writing-mode: vertical-rl;
+  -ms-writing-mode: tb-rl;
 
   a {
     cursor: pointer;
@@ -16,29 +18,23 @@
     font-size: 1.4rem;
     display: inline-block;
     text-transform: none;
-    text-decoration: none;
-    position: relative;
-    transition: var(--transition);
     padding: 0.8rem;
+    transition: var(--transition);
 
-    writing-mode: vertical-rl;
-    -webkit-writing-mode: vertical-rl;
-    -ms-writing-mode: tb-rl;
+    &::after {
+      content: "";
+      display: inline-block;
+      width: 1px;
+      height: 10rem;
+      background-color: var(--color-slate);
+
+      margin-top: 1.5rem;
+    }
 
     &:hover,
     &:focus {
       transform: translateY(-3px);
       color: var(--color-green);
     }
-  }
-
-  &::after {
-    content: "";
-    display: block;
-    width: 1px;
-    height: 10rem;
-    background-color: var(--color-slate);
-
-    margin-top: 1.5rem;
   }
 }

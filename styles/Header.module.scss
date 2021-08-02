@@ -87,38 +87,38 @@
   }
 
   &__s1 {
-    grid-column: col-start 5 / center-end;
+    grid-column: 4 / -1;
     grid-row: 1 / -1;
     align-self: end;
     justify-self: end;
-    position: absolute;
-    z-index: 1000;
-    margin-right: 10.9rem;
+    margin-right: 5rem;
+    position: relative;
+    z-index: 10;
 
     font-size: 50rem;
     font-family: var(--font-ubuntu);
     font-weight: 700;
-    font-stretch: ultra-expanded;
-    transform: rotate(330deg);
+    transform: rotate(-30deg);
     color: var(--color-green);
+    box-shadow: var(--box-shadow);
   }
 
   &__s2 {
-    grid-column: col-start 5 / center-end;
+    grid-column: 4 / -1;
     grid-row: 1 / -1;
     align-self: end;
     justify-self: end;
-    position: absolute;
-    z-index: 100;
-
+    margin-right: 4.1rem;
     margin-bottom: -5rem;
-    margin-right: 10rem;
+    position: relative;
+    z-index: 1;
+
     font-size: 50rem;
     font-family: var(--font-ubuntu);
     font-weight: 700;
-    font-stretch: ultra-expanded;
-    transform: rotate(330deg);
+    transform: rotate(-30deg);
     color: var(--color-slate);
+    box-shadow: var(--box-shadow);
   }
 }
 
