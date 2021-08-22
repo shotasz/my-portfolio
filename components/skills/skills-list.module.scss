@@ -1,0 +1,85 @@
+@import "/styles/mixins";
+
+.figure {
+  height: 33rem;
+  border: 2px solid var(--color-green);
+  border-radius: 1rem;
+  box-shadow: var(--box-shadow);
+  transition: var(--transition);
+
+  display: grid;
+  grid-template-rows: repeat(4, 1fr);
+  align-items: center;
+  justify-items: center;
+
+  position: relative;
+
+  &::before {
+    content: "<figure>";
+    display: block;
+    position: absolute;
+    top: -20%;
+    left: 0%;
+    font-family: var(--font-caveat);
+    color: var(--color-slate);
+  }
+
+  &::after {
+    content: "</figure>";
+    display: block;
+    position: absolute;
+    top: 110%;
+    right: 0%;
+    font-family: var(--font-caveat);
+    color: var(--color-slate);
+  }
+
+  span {
+    color: var(--color-green);
+  }
+}
+
+.icon {
+  margin-top: 3.9rem;
+  min-height: 11rem;
+
+  &__npm {
+    margin-top: 3.9rem;
+    min-height: 11rem;
+    padding-top: 2.5rem;
+  }
+}
+
+.title {
+  align-self: flex-start;
+  font-size: 2.4rem !important;
+  font-family: var(--font-carter-one) !important;
+}
+
+.square {
+  &__1 {
+    @include boxContent(#fc490b, 90%);
+  }
+  &__2 {
+    @include boxContent(#2196f3, 70%);
+  }
+  &__3 {
+    @include boxContent(#cd6699, 70%);
+  }
+  &__4 {
+    @include boxContent(#e4ba42, 70%);
+  }
+  &__5 {
+    @include boxContent(#00acea, 60%);
+  }
+  &__6 {
+    @include boxContent(#cb3837, 50%);
+  }
+}
+
+.percent {
+  margin-bottom: 3.7rem;
+  text-align: center;
+  font-size: 1.8rem !important;
+  font-family: var(--font-carter-one) !important;
+}

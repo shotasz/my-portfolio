@@ -11,7 +11,11 @@ import { Works } from "../components/works";
 import { Contact } from "../components/contact";
 import { Footer } from "../components/footer";
 
-export default function Home() {
+import { getMyData } from "../skillsData";
+
+export default function Home(props) {
+  const myData = getMyData();
+
   return (
     <div className={styles.container}>
       <Headline />
@@ -24,7 +28,7 @@ export default function Home() {
 
       <About />
 
-      <Skills />
+      <Skills items={myData} />
 
       <Works />
 
