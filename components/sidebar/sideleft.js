@@ -1,13 +1,13 @@
 import styles from "./sideleft.module.scss";
 
-import IconHome from "./icons/home";
-import IconUser from "./icons/user";
-import IconSettings from "./icons/settings";
-import IconVision from "./icons/vision";
-import IconEmail from "./icons/email";
-import IconTwitter from "./icons/twitter";
-import IconGithub from "./icons/github";
-import HeaderLogo from "./icons/s-logo";
+import IconHome from "../icons/home";
+import IconUser from "../icons/user";
+import IconSettings from "../icons/settings";
+import IconVision from "../icons/vision";
+import IconEmail from "../icons/email";
+import IconTwitter from "../icons/twitter";
+import IconGithub from "../icons/github";
+import HeaderLogo from "../icons/s-logo";
 
 export function Sideleft() {
   return (

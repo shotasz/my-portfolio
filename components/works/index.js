@@ -1,8 +1,8 @@
-import styles from "./works.module.scss";
+import styles from "./index.module.scss";
 
 import Image from "next/image";
-import IconGithub from "./icons/github";
-import IconLink from "./icons/link";
+import IconGithub from "../icons/github";
+import IconLink from "../icons/link";
 
 export function Works() {
   return (

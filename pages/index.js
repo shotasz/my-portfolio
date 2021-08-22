@@ -3,8 +3,8 @@ import Image from "next/image";
 
 import { Headline } from "../components/headline";
 import { Header } from "../components/header";
-import { Sideleft } from "../components/sideleft";
-import { Sideright } from "../components/sideright";
+import { Sideleft } from "../components/sidebar/sideleft";
+import { Sideright } from "../components/sidebar/sideright";
 import { About } from "../components/about";
 import { Skills } from "../components/skills";
 import { Works } from "../components/works";

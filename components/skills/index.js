@@ -1,13 +1,17 @@
-import styles from "./skills.module.scss";
+import styles from "./index.module.scss";
+import { getMyData } from "../../skillsData";
 
-import IconHtml from "./icons-skill/icon-html";
-import IconCss from "./icons-skill/icon-css";
-import IconSass from "./icons-skill/icon-sass";
-import IconJavascript from "./icons-skill/icon-javascript";
-import IconReact from "./icons-skill/icon-react";
-import IconNpm from "./icons-skill/icon-npm";
+import IconHtml from "../icons-skill/icon-html";
+import IconCss from "../icons-skill/icon-css";
+import IconSass from "../icons-skill/icon-sass";
+import IconJavascript from "../icons-skill/icon-javascript";
+import IconReact from "../icons-skill/icon-react";
+import IconNpm from "../icons-skill/icon-npm";
 
 export function Skills() {
+  const myData = getMyData();
+
+  console.log(myData);
   return (
     <section className={styles.skills}>
       <span className={styles.skills__section_start}>&lt;section&gt;</span>
