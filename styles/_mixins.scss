@@ -1,25 +1,21 @@
-@mixin boxContent($color, $percent) {
-  height: 3.7rem;
-  width: 18rem;
-  margin-top: -2rem;
-  background-color: var(--color-slate);
-  border-radius: 3px;
-  color: var(--color-slate);
-  justify-self: center;
+@mixin box($color, $width, $id) {
+  .square {
+    height: 3.7rem;
+    width: 18rem;
+    margin-top: -2rem;
+    background-color: var(--color-slate);
+    border-radius: 3px;
+    justify-self: center;
 
-  &::before {
-    content: "";
-    display: block;
-    height: 100%;
-    width: $percent;
-
-    background-image: linear-gradient(
-      105deg,
-      rgba($color, 1) 0%,
-      rgba($color, 1) 50%
-    );
-    background-size: 100%;
-    border-radius: 3px 0 0 3px;
+    &::before {
+      content: "";
+      display: block;
+      height: 100%;
+      width: $width;
+      background-image: linear-gradient(105deg, $color 0%, $color 50%);
+      background-size: 100%;
+      border-radius: 3px 0 0 3px;
+    }
   }
 }
 

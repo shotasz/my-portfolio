@@ -19,6 +19,7 @@ export function Skills(props) {
             skill={event.skill}
             percent={event.percent}
             icon={event.icon}
+            color={event.color}
           />
         ))}
       </ul>

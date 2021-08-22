@@ -50,31 +50,12 @@
   }
 }
 
+@include box(#fc490b, 90%);
+
 .title {
   align-self: flex-start;
   font-size: 2.4rem !important;
   font-family: var(--font-carter-one) !important;
-}
-
-.square {
-  &__1 {
-    @include boxContent(#fc490b, 90%);
-  }
-  &__2 {
-    @include boxContent(#2196f3, 70%);
-  }
-  &__3 {
-    @include boxContent(#cd6699, 70%);
-  }
-  &__4 {
-    @include boxContent(#e4ba42, 70%);
-  }
-  &__5 {
-    @include boxContent(#00acea, 60%);
-  }
-  &__6 {
-    @include boxContent(#cb3837, 50%);
-  }
 }
 
 .percent {
