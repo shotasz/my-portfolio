@@ -1,4 +1,4 @@
-import styles from "../styles/Sideleft.module.scss";
+import styles from "./sideleft.module.scss";
 
 import IconHome from "./icons/home";
 import IconUser from "./icons/user";

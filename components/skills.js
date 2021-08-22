@@ -1,4 +1,5 @@
-import styles from "../styles/Skills.module.scss";
+import styles from "./skills.module.scss";
+
 import IconHtml from "./icons-skill/icon-html";
 import IconCss from "./icons-skill/icon-css";
 import IconSass from "./icons-skill/icon-sass";

@@ -1,5 +1,4 @@
-import styles from "../styles/Sideright.module.scss";
-import Image from "next/image";
+import styles from "./sideright.module.scss";
 
 export function Sideright() {
   return (

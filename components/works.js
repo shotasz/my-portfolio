@@ -1,4 +1,5 @@
-import styles from "../styles/Works.module.scss";
+import styles from "./works.module.scss";
+
 import Image from "next/image";
 import IconGithub from "./icons/github";
 import IconLink from "./icons/link";
