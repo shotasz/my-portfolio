@@ -66,12 +66,6 @@
   font-size: 2.4rem;
 }
 
-@mixin spanCaveat {
-  font-family: var(--font-caveat);
-  font-size: 1.8rem;
-  color: var(--color-slate);
-}
-
 @mixin paragraph {
   font-family: var(--font-ubuntu);
   font-weight: 300;
@@ -101,6 +95,22 @@
 
     &:active {
       transform: translateY(3px);
+    }
+  }
+}
+
+@mixin navSvg {
+  svg {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 2rem;
+    color: var(--color-slate);
+    transition: var(--transition);
+
+    &:hover,
+    &:focus {
+      color: var(--color-green);
+      transform: translateY(-3px);
     }
   }
 }

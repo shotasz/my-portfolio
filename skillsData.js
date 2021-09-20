@@ -5,6 +5,12 @@ import IconJavascript from "./components/icons-skill/icon-javascript";
 import IconReact from "./components/icons-skill/icon-react";
 import IconNpm from "./components/icons-skill/icon-npm";
 
+import IconHome from "./components/icons/home";
+import IconUser from "./components/icons/user";
+import IconSettings from "./components/icons/settings";
+import IconVision from "./components/icons/vision";
+import IconEmail from "./components/icons/email";
+
 const MY_SKILLS = [
   {
     id: "1",
@@ -50,6 +56,33 @@ const MY_SKILLS = [
   },
 ];
 
+const NAV_ICONS = [
+  {
+    id: "i1",
+    icon: <IconHome />,
+  },
+  {
+    id: "i2",
+    icon: <IconUser />,
+  },
+  {
+    id: "i3",
+    icon: <IconSettings />,
+  },
+  {
+    id: "i4",
+    icon: <IconVision />,
+  },
+  {
+    id: "i5",
+    icon: <IconEmail />,
+  },
+];
+
 export function getMyData() {
   return MY_SKILLS;
+}
+
+export function getNavIcons() {
+  return NAV_ICONS;
 }
