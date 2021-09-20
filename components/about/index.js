@@ -27,7 +27,7 @@ export function About() {
       <span className={styles.about__section_end}>&lt;/section&gt;</span>
 
       <div className={styles.about__img}>
-        <Image src="/../public/user-image.jpg" width={300} height={300} />
+        <Image src="/user-image.jpg" width={300} height={300} />
       </div>
     </section>
   );

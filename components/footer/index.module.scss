@@ -11,10 +11,6 @@
   grid-template-rows: repeat(5, min-content);
   grid-gap: 2rem;
 
-  span {
-    @include spanCaveat;
-  }
-
   &__footer_start {
     grid-row: 1 / 2;
   }

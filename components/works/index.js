@@ -15,7 +15,7 @@ export function Works() {
       <div className={styles.work}>
         <div className={styles.work__img}>
           <Image
-            src="/../public/kondatte-app.jpg"
+            src="/kondatte-app.jpg"
             width={600}
             height={410}
             quality={30}

@@ -17,10 +17,6 @@
     justify-self: start;
   }
 
-  span {
-    @include spanCaveat;
-  }
-
   i {
     font-style: normal;
     color: var(--color-green);

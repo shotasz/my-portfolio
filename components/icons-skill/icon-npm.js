@@ -2,15 +2,16 @@ import React from "react";
 
 const IconNpm = () => (
   <svg
-    width="120"
-    viewBox="0 0 256 100"
+    width="120px"
     xmlns="http://www.w3.org/2000/svg"
-    preserveAspectRatio="xMinYMin meet"
+    //enable-background="new 0 0 24 24"
+    viewBox="0 0 24 24"
   >
-    <path d="M0 0v85.498h71.166V99.83H128V85.498h128V0H0z" fill="#CB3837" />
+    <rect x="0" y="8" width="40" height="7.39" fill="#FAFAFA" />
+    <rect width="1.333" height="2.714" x="10.667" y="9.964" fill="#C53735" />
     <path
-      d="M42.502 14.332h-28.17v56.834h28.17V28.664h14.332v42.502h14.332V14.332H42.502zM85.498 14.332v71.166h28.664V71.166h28.17V14.332H85.498zM128 56.834h-13.838v-28.17H128v28.17zM184.834 14.332h-28.17v56.834h28.17V28.664h14.332v42.502h14.332V28.664h14.332v42.502h14.332V14.332h-57.328z"
-      fill="#FFF"
+      fill="#C53735"
+      d="M24,7.25H0v8.143h6.667v1.357H12v-1.357h12V7.25z M6.667,14.036H5.333V9.964H4v4.071H1.333V8.607h5.333V14.036z M13.333,14.036h-2.667v1.357H8V8.607h5.333V14.036z M22.667,14.036h-1.333V9.964H20v4.071h-1.333V9.964h-1.333v4.071h-2.667V8.607h8V14.036z"
     />
   </svg>
 );

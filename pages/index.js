@@ -1,5 +1,4 @@
 import styles from "../styles/Home.module.scss";
-import Image from "next/image";
 
 import { Headline } from "../components/headline";
 import { Header } from "../components/header";
@@ -13,7 +12,7 @@ import { Footer } from "../components/footer";
 
 import { getMyData } from "../skillsData";
 
-export default function Home(props) {
+export default function Home() {
   const myData = getMyData();
 
   return (

@@ -2,7 +2,7 @@
 
 .figure {
   height: 33rem;
-  border: 2px solid var(--color-green);
+  border: 3px solid var(--color-green);
   border-radius: 1rem;
   box-shadow: var(--box-shadow);
   transition: var(--transition);
@@ -42,15 +42,7 @@
 .icon {
   margin-top: 3.9rem;
   min-height: 11rem;
-
-  &__npm {
-    margin-top: 3.9rem;
-    min-height: 11rem;
-    padding-top: 2.5rem;
-  }
 }
-
-@include box(#fc490b, 90%);
 
 .title {
   align-self: flex-start;

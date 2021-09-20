@@ -15,7 +15,6 @@ export function Skills(props) {
         {items.map((event) => (
           <SkillsList
             key={event.id}
-            id={event.id}
             skill={event.skill}
             percent={event.percent}
             icon={event.icon}
