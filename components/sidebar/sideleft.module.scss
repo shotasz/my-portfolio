@@ -1,56 +1,54 @@
+@import "/styles/mixins";
+
 .navigation {
   grid-column: sidebarL-start / sidebarL-end;
   grid-row: 1 / -1;
-  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 1000;
+}
 
-  &__logo {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  a {
     color: var(--color-green);
+    transition: none;
+    transform: none;
   }
+}
 
-  &__list {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    list-style: none;
-    margin-top: 15rem;
+.list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  margin-top: 15rem;
 
-    svg {
-      width: 100%;
-      height: 100%;
-      padding-top: 1.2rem;
-      color: var(--color-slate);
-      transition: var(--transition);
+  @include navSvg;
+}
 
-      &:hover,
-      &:focus {
-        color: var(--color-green);
-        transform: translateY(-3px);
-      }
-    }
-  }
+.sns {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  margin-top: 8rem;
 
-  &__sns {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    list-style: none;
-    margin-top: 12rem;
+  a {
+    color: var(--color-slate);
+    padding-top: 2rem;
+    transition: var(--transition);
 
-    a {
-      color: var(--color-slate);
-      padding-top: 1.2rem;
-      transition: var(--transition);
-
-      &:hover,
-      &:focus {
-        color: var(--color-green);
-        transform: translateY(-3px);
-      }
+    &:hover,
+    &:focus {
+      color: var(--color-green);
+      transform: translateY(-3px);
     }
   }
 }

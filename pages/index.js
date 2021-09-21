@@ -2,8 +2,8 @@ import styles from "../styles/Home.module.scss";
 
 import { Headline } from "../components/headline";
 import { Header } from "../components/header";
-import { Sideleft } from "../components/sidebar/sideleft";
-import { Sideright } from "../components/sidebar/sideright";
+import { SideLeft } from "../components/sidebar/sideleft";
+import { SideRight } from "../components/sidebar/sideright";
 import { About } from "../components/about";
 import { Skills } from "../components/skills";
 import { Works } from "../components/works";
@@ -11,29 +11,30 @@ import { Contact } from "../components/contact";
 import { Footer } from "../components/footer";
 
 import { getMyData } from "../skillsData";
+import { Fragment } from "react";
 
 export default function Home() {
   const myData = getMyData();
 
   return (
     <div className={styles.container}>
-      <Headline />
+      <Fragment>
+        <SideLeft />
 
-      <Sideleft />
+        <SideRight />
 
-      <Sideright />
+        <Header />
 
-      <Header />
+        <About />
 
-      <About />
+        <Skills items={myData} />
 
-      <Skills items={myData} />
+        <Works />
 
-      <Works />
+        <Contact />
 
-      <Contact />
-
-      <Footer />
+        <Footer />
+      </Fragment>
     </div>
   );
 }

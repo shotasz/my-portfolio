@@ -52,5 +52,12 @@ span {
 }
 
 a {
-  color: var(--color-green);
+  color: var(--color-slate);
+
+  &:hover,
+  &:focus {
+    transform: translateY(-3px);
+    color: var(--color-green);
+    transition: var(--transition);
+  }
 }

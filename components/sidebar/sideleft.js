@@ -1,54 +1,31 @@
 import styles from "./sideleft.module.scss";
 
-import IconHome from "../icons/home";
-import IconUser from "../icons/user";
-import IconSettings from "../icons/settings";
-import IconVision from "../icons/vision";
-import IconEmail from "../icons/email";
 import IconTwitter from "../icons/twitter";
 import IconGithub from "../icons/github";
 import HeaderLogo from "../icons/s-logo";
 
-export function Sideleft() {
+import { getNavIcons } from "../../skillsData";
+
+export function SideLeft() {
+  const icons = getNavIcons();
+
   return (
-    <nav className={styles.navigation}>
-      <div className={styles.navigation__logo}>
-        <HeaderLogo />
+    <div className={styles.navigation}>
+      <div className={styles.logo}>
+        <a href="/">
+          <HeaderLogo />
+        </a>
       </div>
 
-      <ul className={styles.navigation__list}>
-        <li>
-          <a href="#">
-            <IconHome />
-          </a>
-        </li>
-
-        <li>
-          <a href="#">
-            <IconUser />
-          </a>
-        </li>
-
-        <li>
-          <a href="#">
-            <IconSettings />
-          </a>
-        </li>
-
-        <li>
-          <a href="#">
-            <IconVision />
-          </a>
-        </li>
-
-        <li>
-          <a href="#">
-            <IconEmail />
-          </a>
-        </li>
+      <ul className={styles.list}>
+        {icons.map((icon) => (
+          <li key={icon.id}>
+            <a href="#">{icon.icon}</a>
+          </li>
+        ))}
       </ul>
 
-      <div className={styles.navigation__sns}>
+      <div className={styles.sns}>
         <a href="#">
           <IconTwitter />
         </a>
@@ -57,6 +34,6 @@ export function Sideleft() {
           <IconGithub />
         </a>
       </div>
-    </nav>
+    </div>
   );
 }
