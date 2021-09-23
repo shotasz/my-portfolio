@@ -27,8 +27,8 @@ export function Header() {
       <span className={styles.header__btn_end}>&lt;/button&gt;</span>
       <span className={styles.header__header_end}>&lt;/header&gt;</span>
 
-      <div className={styles.header__s1}>S</div>
-      <div className={styles.header__s2}>S</div>
+      <div className={styles.s1}>S</div>
+      <div className={styles.s2}>S</div>
     </header>
   );
 }

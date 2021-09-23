@@ -11,12 +11,6 @@ export function SideLeft() {
 
   return (
     <div className={styles.navigation}>
-      <div className={styles.logo}>
-        <a href="/">
-          <HeaderLogo />
-        </a>
-      </div>
-
       <ul className={styles.list}>
         {icons.map((icon) => (
           <li key={icon.id}>

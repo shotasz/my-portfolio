@@ -1,3 +1,8 @@
+$desktop: 1240px;
+$tablet: 1024px;
+$phoneWide: 896px;
+$phone: 480px;
+
 @mixin image($width) {
   height: 100%;
   width: $width;
