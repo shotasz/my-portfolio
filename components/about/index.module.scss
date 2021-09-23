@@ -3,7 +3,7 @@
 .about {
   grid-row: 2 / 3;
   grid-column: full-start / full-end;
-  margin: 8rem 4.4rem;
+  margin: 8rem 11rem;
   height: 100%;
   align-items: center;
 
@@ -14,6 +14,14 @@
       minmax(30rem, 1fr)
     );
   grid-row-gap: 2rem;
+
+  @media screen and (max-width: $tablet) {
+    margin: 8rem 4.4rem;
+  }
+
+  @media screen and (max-width: $phoneWide) {
+    margin: 8rem 0rem;
+  }
 
   &__img {
     grid-row: 1 / -1;
@@ -95,9 +103,12 @@
     grid-column: 2 / 3;
     letter-spacing: 0.2rem;
     line-height: 3rem;
-    margin-left: 4.4rem;
 
     @include paragraph;
+
+    @media screen and (max-width: $tablet) {
+      margin-left: 0;
+    }
   }
 
   i {

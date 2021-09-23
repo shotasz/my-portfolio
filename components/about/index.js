@@ -14,14 +14,10 @@ export function About() {
         <br />
         <i>S</i>hotaと申します。
         <br />
-        昨年の夏からフロントエンジニアを目指して、
-        <br />
-        プログラミング学習を開始しました。
-        <br />
+        昨年からフロントエンジニアを目指して、プログラミング学習を開始しました。
         主に<i>Javascript</i>や<i>React</i>
-        をメインに勉強中で、
-        <br />
-        デザインよりコーディングの方を得意とします。
+        をメインに開発を進めていて、フレームワークは<i>NextJS</i>
+        を使っています。
       </p>
       <span className={styles.about__p_end}>&lt;/p&gt;</span>
       <span className={styles.about__section_end}>&lt;/section&gt;</span>

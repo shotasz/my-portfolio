@@ -20,6 +20,10 @@
     height: 9rem;
     background-color: var(--color-slate);
   }
+
+  @media screen and (max-width: $phoneWide) {
+    display: none;
+  }
 }
 
 .list {

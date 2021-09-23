@@ -14,12 +14,7 @@ export function Works() {
       <span className={styles.works__div_start}>&lt;div&gt;</span>
       <div className={styles.work}>
         <div className={styles.work__img}>
-          <Image
-            src="/kondatte-app.jpg"
-            width={600}
-            height={410}
-            quality={30}
-          />
+          <Image src="/kondatte-app.jpg" width={600} height={410} />
         </div>
         <div className={styles.work__content}>
           <h4>Featured Project</h4>

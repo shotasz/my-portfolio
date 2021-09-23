@@ -3,11 +3,15 @@
 .contact {
   grid-row: 5 / 6;
   grid-column: full-start / full-end;
-  margin: 8rem 4.4rem;
+  margin: 8rem 11rem;
 
   display: grid;
   grid-template-columns: min-content 1fr;
   grid-template-rows: repeat(3, min-content);
+
+  @media screen and (max-width: $phoneWide) {
+    margin: 8rem 4.4rem;
+  }
 
   span {
     margin-top: 2rem;
