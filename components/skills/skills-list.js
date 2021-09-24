@@ -8,9 +8,9 @@ function SkillsList(props) {
     <li>
       <figure className={styles.figure}>
         <div className={styles.icon}>{icon}</div>
-        <span className={styles.title}>{skill}</span>
+        <p className={styles.title}>{skill}</p>
         <BoxContainer selectColor={color} selectPercent={percent} />
-        <span className={styles.percent}>{percent}</span>
+        <p className={styles.percent}>{percent}</p>
       </figure>
     </li>
   );

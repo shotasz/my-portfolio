@@ -11,6 +11,15 @@
   grid-template-rows: repeat(5, min-content);
   grid-gap: 2rem;
 
+  @media screen and (max-width: $phone) {
+    grid-row: 6 / 7;
+    grid-column: center-start / center-end;
+
+    span {
+      display: none;
+    }
+  }
+
   &__footer_start {
     grid-row: 1 / 2;
   }
@@ -22,6 +31,7 @@
 
     p {
       @include paragraph;
+      letter-spacing: 3px;
     }
 
     a {

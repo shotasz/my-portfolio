@@ -23,6 +23,15 @@
     margin: 2rem 0rem;
   }
 
+  @media screen and (max-width: $phone) {
+    grid-row: 4 / 5;
+    grid-column: center-start / center-end;
+
+    span {
+      display: none;
+    }
+  }
+
   &__section_start {
     grid-row: 1 / 2;
     grid-column: 1 / 2;
@@ -36,6 +45,11 @@
   h2 {
     grid-row: 3 / 4;
     grid-column: 2 / 3;
+
+    @media screen and (max-width: $phone) {
+      grid-row: 3 / 4;
+      grid-column: 1 / -1;
+    }
 
     @include heading2("03.");
   }
@@ -66,54 +80,94 @@
   grid-column: 2 / -1;
 
   display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-gap: 1rem;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(6, 1fr);
   align-items: center;
 
   &__img {
-    position: relative;
-    z-index: 1;
-    grid-column: 1 / 8;
-    grid-area: 1 / 1 / -1 / 7;
+    grid-column: 1 / 5;
+    grid-row: 1 / -1;
+
+    img {
+      @include image;
+    }
 
     &:hover,
     &:focus {
-      background-color: transparent;
       filter: none;
+    }
+
+    @media screen and (max-width: $tablet) {
+      width: 95%;
+    }
+    @media screen and (max-width: $phoneWide) {
+      width: 90%;
+    }
+
+    @media screen and (max-width: $phone) {
+      grid-column: 1 / -1;
+      grid-row: 1 / -1;
+      width: 100%;
+      border-radius: 50%;
+      background-color: var(--color-slate);
+      filter: opacity(0.3);
     }
   }
 
-  img {
-    @include image(100%);
-  }
-
   &__content {
-    position: relative;
-    z-index: 2;
-    grid-column: 7 / -1;
+    grid-column: 3 / -1;
+    grid-row: 1 / -1;
     text-align: right;
-    grid-area: 1 / 6 / -1 / -1;
+
+    position: relative;
+    z-index: 10;
+
+    @media screen and (max-width: $phone) {
+      grid-column: 1 / -1;
+      grid-row: 1 / -1;
+      margin-right: 2rem;
+
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(5, minmax(min-content, max-content));
+    }
 
     h4 {
       margin: 1rem 0;
       @include heading4;
+
+      @media screen and (max-width: $phone) {
+        grid-column: 1 / -1;
+        grid-row: 1 / 2;
+      }
     }
 
     h3 {
       margin: 0 0 2rem;
+
       @include heading3;
+
+      @media screen and (max-width: $phone) {
+        grid-column: 1 / -1;
+        grid-row: 2 / 3;
+      }
     }
 
     p {
-      text-align: right;
       letter-spacing: 0.2rem;
       line-height: 2.5rem;
-      padding: 2rem 3rem;
+      padding: 3rem 4rem;
       background-color: var(--color-light-navy);
       box-shadow: var(--box-shadow);
       border-radius: 1rem;
+      width: 100%;
 
       @include paragraph;
+
+      @media screen and (max-width: $phone) {
+        width: 90%;
+        justify-self: flex-end;
+      }
     }
 
     ul {
@@ -133,26 +187,28 @@
           margin-right: 3rem;
         }
       }
+
+      @media screen and (max-width: $phone) {
+        grid-column: 1 / -1;
+        grid-row: 4 / 5;
+      }
     }
 
     div {
       margin: 2.5rem 0 1rem;
 
-      display: flex;
-      justify-content: flex-end;
-      align-items: center;
-
       svg {
-        transition: var(--transition);
         cursor: pointer;
+        transition: var(--transition);
 
-        &:hover {
+        &:hover,
+        &:focus {
           color: var(--color-green);
         }
+      }
 
-        &:not(:last-child) {
-          margin-right: 3rem;
-        }
+      @media screen and (max-width: $phone) {
+        display: none;
       }
     }
   }

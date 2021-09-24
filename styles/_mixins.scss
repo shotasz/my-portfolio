@@ -3,19 +3,17 @@ $tablet: 1024px;
 $phoneWide: 896px;
 $phone: 480px;
 
-@mixin image($width) {
-  height: 100%;
-  width: $width;
+@mixin image {
   object-fit: cover;
   border-radius: 1rem;
   background-color: var(--color-green);
   filter: opacity(0.8);
   transition: var(--transition);
   cursor: pointer;
+  overflow: hidden;
 
   &:hover,
   &:focus {
-    background-color: transparent;
     filter: none;
   }
 }
@@ -33,6 +31,7 @@ $phone: 480px;
   color: var(--color-white);
   font-size: 3.5rem;
   margin-bottom: 0.8rem;
+  letter-spacing: 3px;
 
   display: grid;
   grid-template-columns: repeat(2, max-content) 1fr;
@@ -62,6 +61,7 @@ $phone: 480px;
   font-weight: 500;
   color: var(--color-white);
   font-size: 3.4rem;
+  letter-spacing: 2px;
 }
 
 @mixin heading4 {
@@ -69,6 +69,7 @@ $phone: 480px;
   font-weight: 300;
   color: var(--color-green);
   font-size: 2.4rem;
+  letter-spacing: 2px;
 }
 
 @mixin paragraph {
@@ -80,10 +81,10 @@ $phone: 480px;
 
 @mixin btnDesign {
   .btn {
-    display: inline-block;
+    display: block;
     cursor: pointer;
     font-size: 2rem;
-    letter-spacing: 5px;
+    letter-spacing: 3px;
     border: 3px solid var(--color-green);
     border-radius: 1rem;
     color: var(--color-green);

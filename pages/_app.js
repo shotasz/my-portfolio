@@ -1,13 +1,13 @@
+import { Fragment } from "react";
 import { Headline } from "../components/headline";
-import { Layout } from "../components/layout/layout";
 import "../styles/_globals.scss";
 
 function MyApp({ Component, pageProps }) {
   return (
-    <Layout>
+    <Fragment>
       <Headline />
       <Component {...pageProps} />
-    </Layout>
+    </Fragment>
   );
 }
 

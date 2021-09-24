@@ -9,12 +9,32 @@
   grid-row: 1 / 2;
   grid-column: full-start / full-end;
 
+  @media screen and (max-width: $phone) {
+    grid-row: 1 / 2;
+    grid-column: center-start / center-end;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr repeat(3, minmax(min-content, max-content)) 1fr;
+    align-content: center;
+    justify-content: flex-end;
+
+    span {
+      display: none;
+    }
+  }
+
   button {
     grid-column: 3 / 4;
     grid-row: 7 / 9;
     margin-top: 2rem;
     align-self: center;
     justify-self: start;
+
+    @media screen and (max-width: $phone) {
+      grid-column: 1 / -1;
+      grid-row: 4 / 5;
+    }
   }
 
   i {
@@ -55,6 +75,11 @@
     grid-row: 5 / 6;
 
     @include heading1;
+
+    @media screen and (max-width: $phone) {
+      grid-column: 1 / -1;
+      grid-row: 2 / 3;
+    }
   }
 
   p {
@@ -65,6 +90,11 @@
     font-weight: 400;
     color: var(--color-light-slate);
     margin-top: 1rem;
+
+    @media screen and (max-width: $phone) {
+      grid-column: 1 / -1;
+      grid-row: 3 / 4;
+    }
   }
 
   &__btn_start {

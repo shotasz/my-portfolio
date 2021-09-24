@@ -4,7 +4,7 @@
   grid-row: 3 / 4;
   grid-column: full-start / full-end;
   height: 100%;
-  margin: 8rem 4.4rem;
+  margin: 8rem 11rem;
 
   display: grid;
   grid-template-rows: repeat(8, minmax(min-content, max-content));
@@ -15,8 +15,22 @@
   grid-row-gap: 2rem;
   align-items: center;
 
+  @media screen and (max-width: $tablet) {
+    margin: 8rem 4.4rem;
+  }
+
   @media screen and (max-width: $phoneWide) {
     margin: 8rem 0rem;
+  }
+
+  @media screen and (max-width: $phone) {
+    grid-row: 3 / 4;
+    grid-column: center-start / center-end;
+    margin: 4rem 0;
+
+    span {
+      display: none;
+    }
   }
 
   &__section_start {
@@ -31,7 +45,7 @@
 
   h2 {
     grid-row: 3 / 4;
-    grid-column: 2 / 3;
+    grid-column: 1 / -1;
 
     @include heading2("02.");
   }
@@ -55,6 +69,15 @@
     grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
     grid-gap: 15.6rem 10rem;
     margin: 10rem 0;
+
+    @media screen and (max-width: $phone) {
+      display: none;
+
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
+      grid-gap: 10rem 0;
+      margin: 5rem 0;
+    }
   }
 
   &__div_end {

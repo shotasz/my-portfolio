@@ -30,7 +30,6 @@ export function Works() {
           </ul>
           <div>
             <IconGithub />
-            <IconLink />
           </div>
         </div>
       </div>
