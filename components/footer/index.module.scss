@@ -16,8 +16,9 @@
     grid-column: center-start / center-end;
 
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(5, 1fr);
+    grid-template-columns: 1fr;
+    grid-template-rows: min-content;
+    grid-gap: 0;
 
     span {
       display: none;
