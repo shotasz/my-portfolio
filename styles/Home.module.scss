@@ -10,13 +10,12 @@
     [full-end sidebarR-start] 8rem [sidebarR-end];
 
   @media screen and (max-width: $phone) {
-    width: min-content;
     display: grid;
     grid-template-rows: 100vh repeat(5, min-content);
     grid-template-columns:
-      [full-start] minmax(6rem, 1fr)
-      [center-start] repeat(8, minmax(min-content, 1fr))
-      [center-end] minmax(6rem, 1fr)
+      [full-start] 3rem
+      [center-start] repeat(8, 1fr)
+      [center-end] 3rem
       [full-end];
   }
 }

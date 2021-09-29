@@ -28,6 +28,9 @@
     grid-column: center-start / center-end;
     margin: 4rem 0;
 
+    display: grid;
+    grid-template-columns: 1fr;
+
     span {
       display: none;
     }
@@ -48,6 +51,11 @@
     grid-column: 1 / -1;
 
     @include heading2("02.");
+
+    @media screen and (max-width: $phone) {
+      grid-column: 1 / -1;
+      grid-row: 1 / 2;
+    }
   }
 
   &__h2_end {
@@ -71,12 +79,14 @@
     margin: 10rem 0;
 
     @media screen and (max-width: $phone) {
-      display: none;
+      grid-column: 1 / -1;
+      grid-row: 2 /3;
 
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
-      grid-gap: 10rem 0;
-      margin: 5rem 0;
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(auto-fit, min-content);
+      grid-gap: 5rem 10rem;
+      margin: 5rem;
     }
   }
 

@@ -15,6 +15,10 @@
     grid-row: 6 / 7;
     grid-column: center-start / center-end;
 
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+
     span {
       display: none;
     }

@@ -7,10 +7,8 @@ $phone: 480px;
   object-fit: cover;
   border-radius: 1rem;
   background-color: var(--color-green);
-  filter: opacity(0.8);
+  filter: opacity(0.5);
   transition: var(--transition);
-  cursor: pointer;
-  overflow: hidden;
 
   &:hover,
   &:focus {
@@ -38,6 +36,11 @@ $phone: 480px;
   grid-column-gap: 1.5rem;
   align-items: flex-end;
 
+  @media screen and (max-width: $phone) {
+    font-size: 3rem;
+    grid-column-gap: 1rem;
+  }
+
   &::before {
     content: $number;
     display: block;
@@ -45,6 +48,10 @@ $phone: 480px;
     font-weight: 400;
     color: var(--color-green);
     font-size: 2.5rem;
+
+    @media screen and (max-width: $phone) {
+      font-size: 2rem;
+    }
   }
 
   &::after {
@@ -80,28 +87,26 @@ $phone: 480px;
 }
 
 @mixin btnDesign {
-  .btn {
-    display: block;
-    cursor: pointer;
-    font-size: 2rem;
-    letter-spacing: 3px;
-    border: 3px solid var(--color-green);
-    border-radius: 1rem;
-    color: var(--color-green);
-    padding: 1.6rem 2.8rem;
-    text-decoration: none;
-    background-color: transparent;
-    position: relative;
-    transition: var(--transition);
+  display: block;
+  cursor: pointer;
+  font-size: 2rem;
+  letter-spacing: 3px;
+  border: 3px solid var(--color-green);
+  border-radius: 1rem;
+  color: var(--color-green);
+  padding: 1.6rem 2.8rem;
+  text-decoration: none;
+  background-color: transparent;
+  position: relative;
+  transition: var(--transition);
 
-    &:hover,
-    &:focus {
-      background-color: var(--color-green-light);
-    }
+  &:hover,
+  &:focus {
+    background-color: var(--color-green-light);
+  }
 
-    &:active {
-      transform: translateY(3px);
-    }
+  &:active {
+    transform: translateY(3px);
   }
 }
 
