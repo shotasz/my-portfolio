@@ -26,12 +26,9 @@
     }
   }
 
-  span {
-    margin-top: 2rem;
-  }
-
   &__section_start {
     grid-row: 1 / 2;
+    margin-top: 6rem;
   }
 
   &__content {
@@ -43,6 +40,7 @@
     align-content: center;
     justify-content: center;
     flex-direction: column;
+    row-gap: 3rem;
 
     .btn {
       @include btnDesign;
@@ -60,12 +58,6 @@
 
     h2 {
       @include heading2("04.");
-
-      margin-bottom: 5rem;
-    }
-
-    span {
-      margin-bottom: 2rem;
     }
   }
 

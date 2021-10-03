@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export function About() {
   return (
-    <section className={styles.about}>
+    <section className={styles.about} id="about">
       <span className={styles.about__section_start}>&lt;section&gt;</span>
       <span className={styles.about__h2_start}>&lt;h2&gt;</span>
       <h2>About Me</h2>
@@ -22,7 +22,12 @@ export function About() {
       <span className={styles.about__section_end}>&lt;/section&gt;</span>
 
       <div className={styles.about__img}>
-        <Image src="/user-image.jpg" width={300} height={300} />
+        <Image
+          src="/user-image.jpg"
+          width={270}
+          height={270}
+          placeholder="blur"
+        />
       </div>
     </section>
   );

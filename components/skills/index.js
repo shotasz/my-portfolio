@@ -5,7 +5,7 @@ export function Skills(props) {
   const { items } = props;
 
   return (
-    <section className={styles.skills}>
+    <section className={styles.skills} id="skills">
       <span className={styles.skills__section_start}>&lt;section&gt;</span>
       <span className={styles.skills__h2_start}>&lt;h2&gt;</span>
       <h2>Skills & Experiences</h2>

@@ -7,7 +7,7 @@ $phone: 480px;
   object-fit: cover;
   border-radius: 1rem;
   background-color: var(--color-green);
-  filter: opacity(0.5);
+  filter: opacity(0.7);
   transition: var(--transition);
 
   &:hover,
@@ -101,7 +101,7 @@ $phone: 480px;
   transition: var(--transition);
 
   &:hover,
-  &:focus {
+  &:link {
     background-color: var(--color-green-light);
   }
 

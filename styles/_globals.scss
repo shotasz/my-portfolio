@@ -50,12 +50,13 @@ span {
 }
 
 a {
+  cursor: pointer;
   color: var(--color-slate);
+  transition: var(--transition);
 
   &:hover,
   &:focus {
     transform: translateY(-3px);
     color: var(--color-green);
-    transition: var(--transition);
   }
 }
