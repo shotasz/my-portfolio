@@ -2,7 +2,7 @@ import styles from "./index.module.scss";
 
 export function Header() {
   return (
-    <header className={styles.header} id="header">
+    <section className={styles.header} id="header">
       <span className={styles.header__html_start}>&lt;html&gt;</span>
       <span className={styles.header__body_start}>&lt;body&gt;</span>
       <span className={styles.header__header_start}>&lt;header&gt;</span>
@@ -29,6 +29,6 @@ export function Header() {
 
       <div className={styles.s1}>S</div>
       <div className={styles.s2}>S</div>
-    </header>
+    </section>
   );
 }

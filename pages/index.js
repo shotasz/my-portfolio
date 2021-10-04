@@ -17,7 +17,7 @@ export default function Home() {
   const myData = getMyData();
 
   return (
-    <div className={styles.container}>
+    <main className={styles.container}>
       <Fragment>
         <SideLeft />
 
@@ -35,6 +35,6 @@ export default function Home() {
 
         <Footer />
       </Fragment>
-    </div>
+    </main>
   );
 }
