@@ -1,7 +1,7 @@
 import styles from "../styles/Home.module.scss";
 
 import { Headline } from "../components/headline";
-import { Header } from "../components/header";
+import { Hero } from "../components/hero";
 import { SideLeft } from "../components/sidebar/sideleft";
 import { SideRight } from "../components/sidebar/sideright";
 import { About } from "../components/about";
@@ -23,7 +23,7 @@ export default function Home() {
 
         <SideRight />
 
-        <Header />
+        <Hero />
 
         <About />
 

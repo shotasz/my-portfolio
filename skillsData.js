@@ -60,27 +60,27 @@ const NAV_ICONS = [
   {
     id: "i1",
     icon: <IconHome />,
-    section: "#header",
+    section: "hero",
   },
   {
     id: "i2",
     icon: <IconUser />,
-    section: "#about",
+    section: "about",
   },
   {
     id: "i3",
     icon: <IconSettings />,
-    section: "#skills",
+    section: "skills",
   },
   {
     id: "i4",
     icon: <IconVision />,
-    section: "#works",
+    section: "works",
   },
   {
     id: "i5",
     icon: <IconEmail />,
-    section: "#contact",
+    section: "contact",
   },
 ];
 

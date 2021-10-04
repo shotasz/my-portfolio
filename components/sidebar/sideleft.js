@@ -13,7 +13,7 @@ export function SideLeft() {
     const getSection = entry.target.closest("a").getAttribute("section");
 
     return document
-      .querySelector(getSection)
+      .querySelector(`#${getSection}`)
       .scrollIntoView({ behavior: "smooth" });
   }
 

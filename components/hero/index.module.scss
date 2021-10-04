@@ -1,6 +1,6 @@
 @import "/styles/mixins";
 
-.header {
+.hero {
   display: grid;
   grid-template-rows: repeat(10, 1fr);
   grid-template-columns: repeat(5, minmax(min-content, max-content)) 1fr;
@@ -50,7 +50,7 @@
     grid-row: 2 / 3;
   }
 
-  &__header_start {
+  &__hero_start {
     grid-column: 2 / 3;
     grid-row: 3 / 4;
   }
@@ -109,7 +109,7 @@
     grid-row: 9 / 10;
   }
 
-  &__header_end {
+  &__hero_end {
     grid-column: 2 / 3;
     grid-row: 10 / 11;
   }

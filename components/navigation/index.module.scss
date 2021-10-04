@@ -1,0 +1,35 @@
+.header {
+  display: flex;
+  align-items: center;
+  top: 0;
+  height: min-content;
+  //padding: min(3vw, 28px) min(3vw, 32px) 0;
+  width: 100%;
+  position: fixed;
+  z-index: 100;
+  background-color: var(--color-green-light);
+  filter: opacity(0.95);
+
+  a {
+    color: var(--color-green);
+
+    &:hover,
+    &:focus {
+      transform: none;
+    }
+  }
+}
+
+.nav {
+  margin-left: auto;
+
+  ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+  }
+
+  li {
+    margin-right: min(4vw, 24px);
+  }
+}
