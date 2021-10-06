@@ -1,6 +1,5 @@
 import styles from "../styles/Home.module.scss";
 
-import { Headline } from "../components/headline";
 import { Hero } from "../components/hero";
 import { SideLeft } from "../components/sidebar/sideleft";
 import { SideRight } from "../components/sidebar/sideright";

@@ -1,16 +1,8 @@
 import styles from "./index.module.scss";
 import HeaderLogo from "../icons/s-logo";
-import Link from "next/link";
+import { scrollToSection } from "../ui/utilities";
 
 export function Navigation() {
-  function scrollToSection(entry) {
-    const getSection = entry.target.closest("a").getAttribute("section");
-
-    return document
-      .querySelector(`#${getSection}`)
-      .scrollIntoView({ behavior: "smooth" });
-  }
-
   return (
     <header className={styles.header}>
       <h1>

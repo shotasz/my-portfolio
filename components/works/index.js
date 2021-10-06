@@ -14,7 +14,7 @@ export function Works() {
       <span className={styles.works__div_start}>&lt;div&gt;</span>
       <div className={styles.work}>
         <div className={styles.work__img}>
-          <a href="#">
+          <a href="/">
             <Image
               src="/kondatte-app.jpg"
               width={600}
