@@ -1,7 +1,7 @@
 import React from "react";
 
 const HeaderLogo = () => (
-  <svg width="70px" viewBox="0 0 108 109" xmlns="http://www.w3.org/2000/svg">
+  <svg width="50px" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
     <path
       d="M60.7122 32.079L31.3375 49.3259C27.388 51.6448 27.388 57.3552 31.3375 59.6741L60.7122 76.9211C64.7121 79.2695 69.7501 76.3853 69.7501 71.747V37.253C69.7501 32.6147 64.7121 29.7305 60.7122 32.079Z"
       stroke="#64FFDA"

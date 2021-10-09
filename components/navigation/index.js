@@ -2,8 +2,11 @@ import styles from "./index.module.scss";
 import HeaderLogo from "../icons/s-logo";
 import { NavigationList } from "./navigation-list";
 import { scrollToSection } from "../ui/utilities";
+import { useState } from "react";
 
 export function Navigation(props) {
+  const [visible, setVisible] = useState(false);
+
   const item = props.items;
   const listItem = item.slice(1);
 
@@ -14,6 +17,7 @@ export function Navigation(props) {
           <HeaderLogo />
         </a>
       </h1>
+
       <nav className={styles.nav}>
         <ul>
           {listItem &&
@@ -26,6 +30,15 @@ export function Navigation(props) {
             ))}
         </ul>
       </nav>
+
+      <div className={styles.hamburger}>
+        <button className={styles.btn}>
+          <span>M</span>
+          <span>e</span>
+          <span>n</span>
+          <span>u</span>
+        </button>
+      </div>
     </header>
   );
 }
