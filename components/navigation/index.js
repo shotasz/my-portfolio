@@ -5,7 +5,6 @@ import { scrollToSection } from "../ui/utilities";
 
 export function Navigation(props) {
   const item = props.items;
-
   const listItem = item.slice(1);
 
   return (
@@ -15,7 +14,6 @@ export function Navigation(props) {
           <HeaderLogo />
         </a>
       </h1>
-
       <nav className={styles.nav}>
         <ul>
           {listItem &&

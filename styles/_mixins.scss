@@ -112,9 +112,6 @@ $phone: 480px;
 
 @mixin navSvg {
   svg {
-    width: 100%;
-    height: 100%;
-    margin-bottom: 2.5rem;
     color: var(--color-slate);
     transition: var(--transition);
 

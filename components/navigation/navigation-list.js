@@ -3,7 +3,7 @@ import { scrollToSection } from "../ui/utilities";
 
 const StyleList = styled.li`
   margin-right: min(4vw, 24px);
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   font-family: var(--font-ubuntu);
   text-transform: capitalize;
 

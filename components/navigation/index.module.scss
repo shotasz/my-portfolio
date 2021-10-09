@@ -7,7 +7,7 @@
     display: flex;
     align-items: center;
     top: 0;
-    height: 8rem;
+    height: 6rem;
     width: 100%;
     position: fixed;
     z-index: 100;
@@ -21,6 +21,10 @@
       &:focus {
         transform: none;
       }
+    }
+
+    h1 {
+      margin-left: 2rem;
     }
   }
 }
