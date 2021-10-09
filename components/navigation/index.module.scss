@@ -37,30 +37,5 @@
       align-items: center;
       list-style: none;
     }
-
-    li {
-      margin-right: min(4vw, 24px);
-      font-size: 1.8rem;
-      font-family: var(--font-ubuntu);
-
-      a {
-        color: var(--color-light-slate);
-
-        &:hover,
-        &:focus {
-          color: var(--color-green);
-        }
-      }
-
-      &::before {
-        content: "01.";
-        display: inline-block;
-        font-family: var(--font-ubuntu);
-        font-weight: 300;
-        color: var(--color-green);
-        font-size: 1.5rem;
-        margin-right: 0.7rem;
-      }
-    }
   }
 }

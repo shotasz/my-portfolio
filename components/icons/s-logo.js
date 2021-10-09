@@ -2,9 +2,9 @@ import React from "react";
 
 const HeaderLogo = () => (
   <svg
-    width="80px"
-    height="80px"
-    transform="scale(1.1)"
+    width="75px"
+    height="75px"
+    //transform="scale(1.1)"
     viewBox="0 0 108 109"
     xmlns="http://www.w3.org/2000/svg"
   >

@@ -1,8 +1,13 @@
 import styles from "./index.module.scss";
 import HeaderLogo from "../icons/s-logo";
+import { NavigationList } from "./navigation-list";
 import { scrollToSection } from "../ui/utilities";
 
-export function Navigation() {
+export function Navigation(props) {
+  const item = props.items;
+
+  const listItem = item.slice(1);
+
   return (
     <header className={styles.header}>
       <h1>
@@ -13,26 +18,14 @@ export function Navigation() {
 
       <nav className={styles.nav}>
         <ul>
-          <li>
-            <a section="about" onClick={scrollToSection}>
-              About
-            </a>
-          </li>
-          <li>
-            <a section="skills" onClick={scrollToSection}>
-              Skills
-            </a>
-          </li>
-          <li>
-            <a section="works" onClick={scrollToSection}>
-              Works
-            </a>
-          </li>
-          <li>
-            <a section="contact" onClick={scrollToSection}>
-              Contact
-            </a>
-          </li>
+          {listItem &&
+            listItem.map((list) => (
+              <NavigationList
+                key={list.section}
+                id={list.id}
+                section={list.section}
+              />
+            ))}
         </ul>
       </nav>
     </header>
