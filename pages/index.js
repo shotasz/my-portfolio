@@ -1,5 +1,6 @@
 import styles from "../styles/Home.module.scss";
 
+import { Navigation } from "../components/navigation";
 import { Hero } from "../components/hero";
 import { SideLeft } from "../components/sidebar/sideleft";
 import { SideRight } from "../components/sidebar/sideright";
@@ -10,6 +11,7 @@ import { Contact } from "../components/contact";
 import { Footer } from "../components/footer";
 
 import { getMyData } from "../skillsData";
+import { getNavIcons } from "../skillsData";
 import { Fragment } from "react";
 
 export default function Home() {
@@ -18,6 +20,8 @@ export default function Home() {
   return (
     <main className={styles.container}>
       <Fragment>
+        <Navigation items={getNavIcons()} />
+
         <SideLeft />
 
         <SideRight />

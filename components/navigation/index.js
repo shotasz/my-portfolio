@@ -1,14 +1,16 @@
 import styles from "./index.module.scss";
 import HeaderLogo from "../icons/s-logo";
 import { NavigationList } from "./navigation-list";
-import { scrollToSection } from "../ui/utilities";
-import { useState } from "react";
+import { scrollToSection, stickyNavHandler } from "../ui/utilities";
+import { useEffect } from "react";
 
 export function Navigation(props) {
-  const [visible, setVisible] = useState(false);
-
   const item = props.items;
   const listItem = item.slice(1);
+
+  useEffect(() => {
+    stickyNavHandler();
+  }, []);
 
   return (
     <header className={styles.header}>
@@ -32,12 +34,7 @@ export function Navigation(props) {
       </nav>
 
       <div className={styles.hamburger}>
-        <button className={styles.btn}>
-          <span>M</span>
-          <span>e</span>
-          <span>n</span>
-          <span>u</span>
-        </button>
+        <button className={styles.btn}></button>
       </div>
     </header>
   );

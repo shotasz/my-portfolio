@@ -9,7 +9,6 @@
     top: 0;
     height: 6rem;
     width: 100%;
-    position: fixed;
     z-index: 100;
     background-color: var(--color-navy);
     filter: opacity(0.95);
@@ -40,12 +39,13 @@
       display: flex;
       align-items: center;
       list-style: none;
-
-      @media screen and (max-width: $phone) {
-        display: none;
-      }
     }
   }
+}
+
+.section__hidden {
+  opacity: 0;
+  transform: translateY(8rem);
 }
 
 .hamburger {
@@ -186,8 +186,4 @@
       }
     }
   }
-}
-
-.hidden {
-  display: none;
 }
