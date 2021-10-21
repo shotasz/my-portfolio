@@ -1,9 +1,12 @@
 export function scrollToSection(entry) {
   const getSection = entry.target.closest("a").getAttribute("section");
+  const nav = document.querySelector("header");
 
-  return document
+  const log = document
     .querySelector(`#${getSection}`)
     .scrollIntoView({ behavior: "smooth" });
+
+  return log;
 }
 
 export function stickyNavHandler() {
@@ -14,8 +17,11 @@ export function stickyNavHandler() {
   const stickyNav = (entries) => {
     const [entry] = entries;
 
-    if (!entry.isIntersecting) nav.style.position = "fixed";
-    else nav.style.position = "absolute";
+    if (!entry.isIntersecting) {
+      nav.style.position = "fixed";
+    } else {
+      nav.style.position = "absolute";
+    }
   };
 
   const headerObserver = new IntersectionObserver(stickyNav, {

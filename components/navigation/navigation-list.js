@@ -29,7 +29,6 @@ const StyleList = styled.li`
 
 export function NavigationList(props) {
   const count = props.id.slice(1);
-
   return (
     <StyleList id={count}>
       <a section={props.section} onClick={scrollToSection}>
