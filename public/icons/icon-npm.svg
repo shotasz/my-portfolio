@@ -1,10 +1,7 @@
-import React from "react";
-
-const IconNpm = () => (
   <svg
     width="120px"
     xmlns="http://www.w3.org/2000/svg"
-    //enable-background="new 0 0 24 24"
+    enable-background="new 0 0 24 24"
     viewBox="0 0 24 24"
   >
     <rect x="0" y="8" width="40" height="7.39" fill="#FAFAFA" />
@@ -14,6 +11,3 @@ const IconNpm = () => (
       d="M24,7.25H0v8.143h6.667v1.357H12v-1.357h12V7.25z M6.667,14.036H5.333V9.964H4v4.071H1.333V8.607h5.333V14.036z M13.333,14.036h-2.667v1.357H8V8.607h5.333V14.036z M22.667,14.036h-1.333V9.964H20v4.071h-1.333V9.964h-1.333v4.071h-2.667V8.607h8V14.036z"
     />
   </svg>
-);
-
-export default IconNpm;

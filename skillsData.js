@@ -1,10 +1,3 @@
-import IconHtml from "./components/icons-skill/icon-html";
-import IconCss from "./components/icons-skill/icon-css";
-import IconSass from "./components/icons-skill/icon-sass";
-import IconJavascript from "./components/icons-skill/icon-javascript";
-import IconReact from "./components/icons-skill/icon-react";
-import IconNpm from "./components/icons-skill/icon-npm";
-
 import IconHome from "./components/icons/home";
 import IconUser from "./components/icons/user";
 import IconSettings from "./components/icons/settings";
@@ -15,44 +8,50 @@ const MY_SKILLS = [
   {
     id: "1",
     skill: "HTML",
+    description: "HTML画像",
     color: "#fc490b",
     percent: "90%",
-    icon: <IconHtml />,
+    icon: "./icons/icon-html.svg",
   },
   {
     id: "2",
     skill: "CSS",
+    description: "CSS画像",
     color: "#2196f3",
     percent: "70%",
-    icon: <IconCss />,
+    icon: "./icons/icon-css.svg",
   },
   {
     id: "3",
     skill: "SASS",
+    description: "SASS画像",
     color: "#cd6699",
     percent: "70%",
-    icon: <IconSass />,
+    icon: "./icons/icon-sass.svg",
   },
   {
     id: "4",
     skill: "JAVASCRIPT",
+    description: "JAVASCRIPT画像",
     color: "#e4ba42",
     percent: "70%",
-    icon: <IconJavascript />,
+    icon: "./icons/icon-javascript.svg",
   },
   {
     id: "5",
     skill: "REACT",
+    description: "REACT画像",
     color: "#00acea",
     percent: "60%",
-    icon: <IconReact />,
+    icon: "./icons/icon-react.svg",
   },
   {
     id: "6",
     skill: "NPM",
+    description: "NPM画像",
     color: "#cb3837",
     percent: "50%",
-    icon: <IconNpm />,
+    icon: "./icons/icon-npm.svg",
   },
 ];
 
