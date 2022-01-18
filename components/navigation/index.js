@@ -2,8 +2,14 @@ import styles from "./index.module.scss";
 import HeaderLogo from "../icons/s-logo";
 import { NavigationList } from "./navigation-list";
 import { scrollToSection, stickyNavHandler } from "../ui/utilities";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import styled from "styled-components";
+
+import {
+  disableBodyScroll,
+  enableBodyScroll,
+  clearAllBodyScrollLocks,
+} from "body-scroll-lock";
 
 const InnerNav = styled.div`
   position: fixed;
@@ -28,6 +34,7 @@ const InnerNav = styled.div`
 export function Navigation(props) {
   const item = props.items;
   const listItem = item.slice(1);
+  const ref = useRef();
 
   const [mobileNav, setMobileNav] = useState();
   const [mobileWideNav, setMobileWideNav] = useState();
@@ -58,12 +65,23 @@ export function Navigation(props) {
   }
 
   useEffect(() => {
+    if (ref.current) {
+      if (visibleNav) {
+        disableBodyScroll(ref.current);
+      } else {
+        enableBodyScroll(ref.current);
+      }
+    }
     stickyNavHandler();
     handleResizeNav();
-  }, []);
+
+    return () => {
+      clearAllBodyScrollLocks();
+    };
+  }, [visibleNav]);
 
   return (
-    <header className={styles.header}>
+    <header ref={ref} className={styles.header}>
       <h1>
         <a section="hero" onClick={scrollToSection}>
           <HeaderLogo />
