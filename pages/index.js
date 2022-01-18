@@ -14,7 +14,19 @@ import { getMyData } from "../skillsData";
 import { getNavIcons } from "../skillsData";
 import { Fragment } from "react";
 
-export default function Home() {
+export function getStaticProps() {
+  const products = getMyData();
+
+  return {
+    props: {
+      products,
+    },
+    revalidate: 4 * 60 * 60,
+  };
+}
+
+export default function Home(products) {
+  console.log(products);
   const myData = getMyData();
 
   return (
