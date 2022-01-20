@@ -51,8 +51,7 @@
     margin-top: 1.5rem;
     transition: var(--transition);
 
-    &:hover,
-    &:focus {
+    &:hover {
       color: var(--color-green);
       transform: translateY(-3px);
     }

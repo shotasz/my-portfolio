@@ -42,11 +42,11 @@ export function SideLeft() {
       </ul>
 
       <div className={styles.sns}>
-        <a href="https://twitter.com/S2Shota123">
+        <a href="https://twitter.com/S2Shota123" target="_blank">
           <IconTwitter />
         </a>
 
-        <a href="https://github.com/shotasz">
+        <a href="https://github.com/shotasz" target="_blank">
           <IconGithub />
         </a>
       </div>
