@@ -34,6 +34,7 @@ const InnerNav = styled.div`
 export function Navigation(props) {
   const item = props.items;
   const listItem = item.slice(1);
+
   const ref = useRef();
 
   const [mobileNav, setMobileNav] = useState();

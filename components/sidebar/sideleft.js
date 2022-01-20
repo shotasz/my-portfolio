@@ -2,24 +2,43 @@ import styles from "./sideleft.module.scss";
 
 import IconTwitter from "../icons/twitter";
 import IconGithub from "../icons/github";
+import IconHome from "../icons/home";
+import IconUser from "../icons/user";
+import IconSettings from "../icons/settings";
+import IconVision from "../icons/vision";
+import IconEmail from "../icons/email";
 
-import { getNavIcons } from "../../skillsData";
 import { scrollToSection } from "../ui/utilities";
 
 export function SideLeft() {
-  const icons = getNavIcons();
-
   return (
     <div className={styles.navigation}>
       <ul className={styles.list}>
-        {icons &&
-          icons.map((icon) => (
-            <li key={icon.id}>
-              <a section={icon.section} onClick={scrollToSection}>
-                {icon.icon}
-              </a>
-            </li>
-          ))}
+        <li>
+          <a section="hero" onClick={scrollToSection}>
+            <IconHome />
+          </a>
+        </li>
+        <li>
+          <a section="about" onClick={scrollToSection}>
+            <IconUser />
+          </a>
+        </li>
+        <li>
+          <a section="skills" onClick={scrollToSection}>
+            <IconSettings />
+          </a>
+        </li>
+        <li>
+          <a section="works" onClick={scrollToSection}>
+            <IconVision />
+          </a>
+        </li>
+        <li>
+          <a section="contact" onClick={scrollToSection}>
+            <IconEmail />
+          </a>
+        </li>
       </ul>
 
       <div className={styles.sns}>

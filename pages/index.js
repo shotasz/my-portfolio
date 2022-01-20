@@ -11,28 +11,24 @@ import { Contact } from "../components/contact";
 import { Footer } from "../components/footer";
 
 import { getMyData } from "../skillsData";
-import { getNavIcons } from "../skillsData";
 import { Fragment } from "react";
 
 export function getStaticProps() {
-  const products = getMyData();
+  const data = getMyData();
 
   return {
     props: {
-      products,
+      data,
     },
     revalidate: 4 * 60 * 60,
   };
 }
 
-export default function Home(products) {
-  console.log(products);
-  const myData = getMyData();
-
+export default function Home({ data }) {
   return (
     <main className={styles.container}>
       <Fragment>
-        <Navigation items={getNavIcons()} />
+        <Navigation items={data.sections} />
 
         <SideLeft />
 
@@ -42,7 +38,7 @@ export default function Home(products) {
 
         <About />
 
-        <Skills items={myData} />
+        <Skills items={data.skills} />
 
         <Works />
 

@@ -1,8 +1,8 @@
 import styles from "./index.module.scss";
 import SkillsList from "./skills-list";
 
-export function Skills(props) {
-  const { items } = props;
+export function Skills({ items }) {
+  const data = items;
 
   return (
     <section className={styles.skills} id="skills">
@@ -12,16 +12,17 @@ export function Skills(props) {
       <span className={styles.skills__h2_end}>&lt;/h2&gt;</span>
       <span className={styles.skills__div_start}>&lt;div&gt;</span>
       <ul>
-        {items.map((event) => (
-          <SkillsList
-            key={event.id}
-            skill={event.skill}
-            percent={event.percent}
-            icon={event.icon}
-            color={event.color}
-            description={event.description}
-          />
-        ))}
+        {data &&
+          data.map((item) => (
+            <SkillsList
+              key={item.id}
+              skill={item.skill}
+              percent={item.percent}
+              icon={item.icon}
+              color={item.color}
+              description={item.description}
+            />
+          ))}
       </ul>
       <span className={styles.skills__div_end}>&lt;/div&gt;</span>
       <span className={styles.skills__section_end}>&lt;/section&gt;</span>
