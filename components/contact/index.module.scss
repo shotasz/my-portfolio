@@ -16,6 +16,7 @@
   @media screen and (max-width: $phone) {
     grid-row: 5 / 6;
     grid-column: center-start / center-end;
+    margin: 12rem auto;
 
     display: grid;
     grid-template-columns: 1fr;

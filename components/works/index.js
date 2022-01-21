@@ -20,6 +20,8 @@ export function Works() {
               width={600}
               height={410}
               placeholder="blur"
+              quality="85"
+              priority={true}
             />
           </a>
         </div>

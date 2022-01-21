@@ -32,6 +32,7 @@
     grid-row-gap: 4rem;
 
     margin: 4rem 0;
+    padding: 0 3.5rem;
 
     span {
       display: none;
@@ -111,6 +112,8 @@
     @media screen and (max-width: $phone) {
       grid-column: 1 / -1;
       grid-row: 2 / 3;
+
+      padding-top: 4rem;
     }
   }
 
