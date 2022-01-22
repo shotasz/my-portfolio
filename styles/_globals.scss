@@ -19,6 +19,7 @@
   --transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
 
   --box-shadow: 0 2rem 4rem rgba(#000, 0.1);
+  --text-shadow: 0 2rem 4rem rgba(#000, 0.1);
 }
 
 *,
@@ -60,4 +61,14 @@ a {
     transform: translateY(-3px);
     color: var(--color-green);
   }
+}
+
+h1,
+h2,
+h3,
+h4,
+a,
+i,
+p {
+  text-shadow: var(--text-shadow);
 }
