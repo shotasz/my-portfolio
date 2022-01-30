@@ -10,7 +10,7 @@ const StyleList = styled.li`
   &::before {
     content: "0${(props) => props.id - 1}.";
     display: inline-block;
-    font-family: var(--font-ubuntu);
+    font-family: var(--font-roboto);
     font-weight: 300;
     color: var(--color-green);
     font-size: 1.5rem;
@@ -18,7 +18,10 @@ const StyleList = styled.li`
   }
 
   a {
-    color: var(--color-light-slate) !important;
+    color: var(--color-lightest-slate) !important;
+    font-family: var(--font-ubuntu);
+    font-weight: 500;
+    letter-spacing: 1px;
 
     &:hover,
     &:focus {
