@@ -5,13 +5,13 @@
   grid-template-rows: repeat(10, 1fr);
   grid-template-columns: repeat(5, minmax(min-content, max-content)) 1fr;
 
-  height: 100vh;
   grid-row: 1 / 2;
   grid-column: full-start / full-end;
 
   @media screen and (max-width: $phone) {
     grid-row: 1 / 2;
     grid-column: center-start / center-end;
+
     margin: 0 auto;
 
     display: grid;

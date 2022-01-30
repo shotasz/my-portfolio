@@ -8,7 +8,7 @@ export function Skills({ items }) {
     <section className={styles.skills} id="skills">
       <span className={styles.skills__section_start}>&lt;section&gt;</span>
       <span className={styles.skills__h2_start}>&lt;h2&gt;</span>
-      <h2>Language learned</h2>
+      <h2>Language Learned</h2>
       <span className={styles.skills__h2_end}>&lt;/h2&gt;</span>
       <span className={styles.skills__div_start}>&lt;div&gt;</span>
       <ul>
