@@ -48,6 +48,7 @@ $phone: 480px;
     font-weight: 400;
     color: var(--color-green);
     font-size: 2.5rem;
+    padding-bottom: 4px;
 
     @media screen and (max-width: $phone) {
       font-size: 2rem;

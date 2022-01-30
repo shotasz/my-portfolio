@@ -16,7 +16,7 @@
   @media screen and (max-width: $phone) {
     grid-row: 5 / 6;
     grid-column: center-start / center-end;
-    margin: 12rem auto;
+    margin: 12rem 0;
 
     display: grid;
     grid-template-columns: 1fr;
@@ -42,6 +42,7 @@
     justify-content: center;
     flex-direction: column;
     row-gap: 3rem;
+    min-width: 30rem;
 
     .btn {
       @include btnDesign;
@@ -59,6 +60,7 @@
 
     h2 {
       @include heading2("04.");
+      margin-bottom: 6rem;
     }
   }
 
