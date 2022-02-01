@@ -41,8 +41,6 @@ export function Navigation(props) {
   const [mobileWideNav, setMobileWideNav] = useState();
   const [visibleNav, setVisibleNav] = useState(false);
 
-  const closeNavBar = () => setVisibleNav(false);
-
   function handleMobileNav() {
     setVisibleNav(!visibleNav);
   }
@@ -113,7 +111,7 @@ export function Navigation(props) {
       </div>
 
       {visibleNav && (
-        <InnerNav height={visibleNav ? "100vh" : "0"} onClick={closeNavBar}>
+        <InnerNav height={visibleNav ? "100vh" : "0"} onClick={handleMobileNav}>
           <ul>
             {listItem &&
               visibleNav &&
