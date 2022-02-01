@@ -54,132 +54,132 @@
   margin-right: 2rem;
   box-shadow: var(--box-shadow);
 
-  button {
-    transform: translateY(3px);
-    padding: 0.8rem;
-    width: 100%;
-    height: 100%;
-    position: relative;
-    background: var(--color-green-light);
-    border-radius: 3px;
-    color: white;
-    font-weight: 700;
-    letter-spacing: 1px;
-    border: none;
-    font-size: 15px;
-    outline: none;
-    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
-    cursor: pointer;
-  }
+  // button {
+  //   transform: translateY(3px);
+  //   padding: 0.8rem;
+  //   width: 100%;
+  //   height: 100%;
+  //   position: relative;
+  //   background: var(--color-green-light);
+  //   border-radius: 3px;
+  //   color: white;
+  //   font-weight: 700;
+  //   letter-spacing: 1px;
+  //   border: none;
+  //   font-size: 15px;
+  //   outline: none;
+  //   font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  //   cursor: pointer;
+  // }
 
-  .btn > button {
-    letter-spacing: 0;
-  }
+  // .btn > button {
+  //   letter-spacing: 0;
+  // }
 
-  .btn span {
-    letter-spacing: 0;
-    display: inline-block;
-    color: var(--color-green);
-    position: relative;
-    width: 12px !important;
-    transition: all 0.5s ease-in-out;
-  }
+  // .btn span {
+  //   letter-spacing: 0;
+  //   display: inline-block;
+  //   color: var(--color-green);
+  //   position: relative;
+  //   width: 12px !important;
+  //   transition: all 0.5s ease-in-out;
+  // }
 
-  .btn span:nth-of-type(1) {
-    width: 5px;
-  }
+  // .btn span:nth-of-type(1) {
+  //   width: 5px;
+  // }
 
-  .btn span:nth-of-type(2) {
-    width: 1px;
-  }
+  // .btn span:nth-of-type(2) {
+  //   width: 1px;
+  // }
 
-  .btn span:nth-of-type(3) {
-    width: 3px;
-  }
+  // .btn span:nth-of-type(3) {
+  //   width: 3px;
+  // }
 
-  .btn span:nth-of-type(4) {
-    width: 4px;
-  }
+  // .btn span:nth-of-type(4) {
+  //   width: 4px;
+  // }
 
-  .btn:hover span:nth-of-type(1) {
-    animation: m 0.5s;
-  }
+  // .btn:hover span:nth-of-type(1) {
+  //   animation: m 0.5s;
+  // }
 
-  .btn:hover span:nth-of-type(2) {
-    animation: e 0.5s;
-  }
+  // .btn:hover span:nth-of-type(2) {
+  //   animation: e 0.5s;
+  // }
 
-  .btn:hover span:nth-of-type(3) {
-    animation: n 0.5s;
-  }
+  // .btn:hover span:nth-of-type(3) {
+  //   animation: n 0.5s;
+  // }
 
-  .btn:hover span:nth-of-type(4) {
-    animation: u 0.5s;
-  }
+  // .btn:hover span:nth-of-type(4) {
+  //   animation: u 0.5s;
+  // }
 
-  @keyframes m {
-    0% {
-      transform: translate(0, 0);
-    }
-    20% {
-      transform: translate(-10px, -2px);
-    }
-    80% {
-      transform: translate(0, 0);
-    }
-    100% {
-      transform: translate(0, 0);
-    }
-  }
+  // @keyframes m {
+  //   0% {
+  //     transform: translate(0, 0);
+  //   }
+  //   20% {
+  //     transform: translate(-10px, -2px);
+  //   }
+  //   80% {
+  //     transform: translate(0, 0);
+  //   }
+  //   100% {
+  //     transform: translate(0, 0);
+  //   }
+  // }
 
-  @keyframes e {
-    0% {
-      transform: translate(0, 0);
-    }
-    25% {
-      transform: translate(-4px, 0);
-    }
-    50% {
-      transform: translate(3px, 4px);
-    }
-    80% {
-      transform: translate(0, 0);
-    }
-    100% {
-      transform: translate(0, 0);
-    }
-  }
+  // @keyframes e {
+  //   0% {
+  //     transform: translate(0, 0);
+  //   }
+  //   25% {
+  //     transform: translate(-4px, 0);
+  //   }
+  //   50% {
+  //     transform: translate(3px, 4px);
+  //   }
+  //   80% {
+  //     transform: translate(0, 0);
+  //   }
+  //   100% {
+  //     transform: translate(0, 0);
+  //   }
+  // }
 
-  @keyframes n {
-    0% {
-      transform: translate(0, 0);
-    }
-    20% {
-      transform: rotate(360deg);
-    }
-    50% {
-      transform: scale(2);
-    }
-    80% {
-      transform: translate(0, 0);
-    }
-    100% {
-      transform: translate(0, 0);
-    }
-  }
+  // @keyframes n {
+  //   0% {
+  //     transform: translate(0, 0);
+  //   }
+  //   20% {
+  //     transform: rotate(360deg);
+  //   }
+  //   50% {
+  //     transform: scale(2);
+  //   }
+  //   80% {
+  //     transform: translate(0, 0);
+  //   }
+  //   100% {
+  //     transform: translate(0, 0);
+  //   }
+  // }
 
-  @keyframes u {
-    0% {
-      transform: translate(0, 0);
-    }
-    20% {
-      transform: translate(-10px, -2px);
-    }
-    80% {
-      transform: translate(0, 0);
-    }
-    100% {
-      transform: translate(0, 0);
-    }
-  }
+  // @keyframes u {
+  //   0% {
+  //     transform: translate(0, 0);
+  //   }
+  //   20% {
+  //     transform: translate(-10px, -2px);
+  //   }
+  //   80% {
+  //     transform: translate(0, 0);
+  //   }
+  //   100% {
+  //     transform: translate(0, 0);
+  //   }
+  // }
 }

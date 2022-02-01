@@ -5,6 +5,9 @@ import { scrollToSection, stickyNavHandler } from "../ui/utilities";
 import { useEffect, useRef, useState } from "react";
 import styled from "styled-components";
 
+import { useDisclosure, IconButton, Flex } from "@chakra-ui/react";
+import { CloseIcon, HamburgerIcon } from "@chakra-ui/icons";
+
 import {
   disableBodyScroll,
   enableBodyScroll,
@@ -13,15 +16,13 @@ import {
 
 const InnerNav = styled.div`
   position: fixed;
-  top: 0;
-  right: 0;
-  height: ${(props) => props.height};
-  width: 100vw;
+  top: 100%;
+  width: 100%;
   background-color: var(--color-navy);
   transition: var(--transition);
 
   ul {
-    padding: 5rem 0;
+    padding: 0;
     list-style: none;
   }
 
@@ -39,11 +40,6 @@ export function Navigation(props) {
 
   const [mobileNav, setMobileNav] = useState();
   const [mobileWideNav, setMobileWideNav] = useState();
-  const [visibleNav, setVisibleNav] = useState(false);
-
-  function handleMobileNav() {
-    setVisibleNav(!visibleNav);
-  }
 
   function handleResizeNav() {
     function handleResize() {
@@ -63,21 +59,24 @@ export function Navigation(props) {
     return () => window.removeEventListener("resize", handleResize);
   }
 
+  const { isOpen, onToggle } = useDisclosure();
+
   useEffect(() => {
     if (ref.current) {
-      if (visibleNav) {
+      if (isOpen) {
         disableBodyScroll(ref.current);
       } else {
         enableBodyScroll(ref.current);
       }
     }
+
     stickyNavHandler();
     handleResizeNav();
 
     return () => {
       clearAllBodyScrollLocks();
     };
-  }, [visibleNav]);
+  }, [isOpen]);
 
   return (
     <header ref={ref} className={styles.header}>
@@ -100,21 +99,41 @@ export function Navigation(props) {
         </ul>
       </nav>
 
-      <div className={mobileNav ? styles.hamburger : styles.none}>
-        <button className={styles.btn} onClick={handleMobileNav}>
-          <span>{!visibleNav ? "T" : "C"}</span>
-          <span>{!visibleNav ? "O" : "L"}</span>
-          <span>{!visibleNav ? "U" : "O"}</span>
-          <span>{!visibleNav ? "C" : "S"}</span>
-          <span>{!visibleNav ? "H" : "E"}</span>
+      {/* <div className={mobileNav ? styles.hamburger : styles.none}>
+        <button className={styles.btn} onClick={onToggle}>
+          <span>{!isOpen ? "T" : "C"}</span>
+          <span>{!isOpen ? "O" : "L"}</span>
+          <span>{!isOpen ? "U" : "O"}</span>
+          <span>{!isOpen ? "C" : "S"}</span>
+          <span>{!isOpen ? "H" : "E"}</span>
         </button>
-      </div>
+      </div> */}
+      {mobileNav && (
+        <Flex
+          color={"var(--color-slate)"}
+          py={{ base: 2 }}
+          px={{ base: 8 }}
+          align={"center"}
+        >
+          <IconButton
+            onClick={onToggle}
+            icon={
+              isOpen ? (
+                <CloseIcon w={25} h={25} />
+              ) : (
+                <HamburgerIcon w={30} h={30} />
+              )
+            }
+            variant={"unstyled"}
+          />
+        </Flex>
+      )}
 
-      {visibleNav && (
-        <InnerNav height={visibleNav ? "100vh" : "0"} onClick={handleMobileNav}>
+      {isOpen && (
+        <InnerNav onClick={onToggle}>
           <ul>
             {listItem &&
-              visibleNav &&
+              isOpen &&
               listItem.map((list) => (
                 <NavigationList
                   key={list.section}
