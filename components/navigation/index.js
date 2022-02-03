@@ -5,32 +5,13 @@ import { scrollToSection, stickyNavHandler } from "../ui/utilities";
 import { useEffect, useRef, useState } from "react";
 import styled from "styled-components";
 
-import { useDisclosure, IconButton, Flex } from "@chakra-ui/react";
-import { CloseIcon, HamburgerIcon } from "@chakra-ui/icons";
+import { useDisclosure } from "@chakra-ui/react";
 
 import {
   disableBodyScroll,
   enableBodyScroll,
   clearAllBodyScrollLocks,
 } from "body-scroll-lock";
-
-const InnerNav = styled.div`
-  position: fixed;
-  top: 100%;
-  width: 100%;
-  background-color: var(--color-navy);
-  transition: var(--transition);
-
-  ul {
-    padding: 0;
-    list-style: none;
-  }
-
-  li {
-    text-align: center;
-    margin: 5rem 0;
-  }
-`;
 
 export function Navigation(props) {
   const item = props.items;
@@ -80,60 +61,22 @@ export function Navigation(props) {
 
   return (
     <header ref={ref} className={styles.header}>
-      <h1>
-        <a section="hero" onClick={scrollToSection}>
-          <HeaderLogo />
-        </a>
-      </h1>
-
-      <nav className={mobileWideNav ? styles.nav : styles.none}>
-        <ul>
-          {listItem &&
-            listItem.map((list) => (
-              <NavigationList
-                key={list.section}
-                id={list.id}
-                section={list.section}
-              />
-            ))}
-        </ul>
-      </nav>
-
-      {/* <div className={mobileNav ? styles.hamburger : styles.none}>
-        <button className={styles.btn} onClick={onToggle}>
-          <span>{!isOpen ? "T" : "C"}</span>
-          <span>{!isOpen ? "O" : "L"}</span>
-          <span>{!isOpen ? "U" : "O"}</span>
-          <span>{!isOpen ? "C" : "S"}</span>
-          <span>{!isOpen ? "H" : "E"}</span>
-        </button>
-      </div> */}
       {mobileNav && (
-        <Flex
-          color={"var(--color-slate)"}
-          py={{ base: 2 }}
-          px={{ base: 8 }}
-          align={"center"}
-        >
-          <IconButton
-            onClick={onToggle}
-            icon={
-              isOpen ? (
-                <CloseIcon w={25} h={25} />
-              ) : (
-                <HamburgerIcon w={30} h={30} />
-              )
-            }
-            variant={"unstyled"}
-          />
-        </Flex>
+        <div>
+          <input type="checkbox" className={styles.checkbox} id="navi-toggle" />
+
+          <label htmlFor="navi-toggle" className={styles.button}>
+            <span className={styles.icon}>&nbsp;</span>
+          </label>
+
+          <div className={styles.background}>&nbsp;</div>
+        </div>
       )}
 
-      {isOpen && (
-        <InnerNav onClick={onToggle}>
+      {mobileWideNav && (
+        <nav className={styles.nav}>
           <ul>
             {listItem &&
-              isOpen &&
               listItem.map((list) => (
                 <NavigationList
                   key={list.section}
@@ -142,7 +85,7 @@ export function Navigation(props) {
                 />
               ))}
           </ul>
-        </InnerNav>
+        </nav>
       )}
     </header>
   );
