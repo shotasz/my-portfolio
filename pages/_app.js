@@ -1,15 +1,14 @@
 import "../styles/_globals.scss";
 
-import { ChakraProvider } from "@chakra-ui/react";
-import { theme } from "../components/ui/theme";
 import { Headline } from "../components/headline";
+import { Fragment } from "react";
 
 function MyApp({ Component, pageProps }) {
   return (
-    <ChakraProvider theme={theme}>
+    <Fragment>
       <Headline />
       <Component {...pageProps} />
-    </ChakraProvider>
+    </Fragment>
   );
 }
 

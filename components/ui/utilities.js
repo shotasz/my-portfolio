@@ -20,7 +20,7 @@ export function stickyNavHandler() {
     if (!entry.isIntersecting) {
       nav.style.position = "fixed";
     } else {
-      nav.style.position = "absolute";
+      nav.style.position = "fixed";
     }
   };
 
