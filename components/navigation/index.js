@@ -3,7 +3,6 @@ import HeaderLogo from "../icons/s-logo";
 import { NavigationList } from "./navigation-list";
 import { scrollToSection, stickyNavHandler } from "../ui/utilities";
 import { useEffect, useRef, useState } from "react";
-import styled from "styled-components";
 
 import { useDisclosure } from "@chakra-ui/react";
 
@@ -70,6 +69,19 @@ export function Navigation(props) {
           </label>
 
           <div className={styles.background}>&nbsp;</div>
+
+          <nav className={styles.respondDisplay}>
+            <ul>
+              {listItem &&
+                listItem.map((list) => (
+                  <NavigationList
+                    key={list.section}
+                    id={list.id}
+                    section={list.section}
+                  />
+                ))}
+            </ul>
+          </nav>
         </div>
       )}
 
