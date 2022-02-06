@@ -3,6 +3,7 @@ import HeaderLogo from "../icons/s-logo";
 import { NavigationList } from "./navigation-list";
 import { scrollToSection, stickyNavHandler } from "../ui/utilities";
 import { useEffect, useRef, useState } from "react";
+import { StyleIcon, StyleButton } from "../ui/ui";
 
 import { useDisclosure } from "@chakra-ui/react";
 
@@ -58,19 +59,31 @@ export function Navigation(props) {
     };
   }, [isOpen]);
 
+  const background = {
+    transform: "scale(80)",
+  };
+
+  const respondDisplay = {
+    opacity: "1",
+    width: "100%",
+  };
+
   return (
     <header ref={ref} className={styles.header}>
       {mobileNav && (
         <div>
-          <input type="checkbox" className={styles.checkbox} id="navi-toggle" />
+          <StyleButton onClick={onToggle}>
+            <StyleIcon isOpen={isOpen}>&nbsp;</StyleIcon>
+          </StyleButton>
 
-          <label htmlFor="navi-toggle" className={styles.button}>
-            <span className={styles.icon}>&nbsp;</span>
-          </label>
+          <div className={styles.background} style={isOpen ? background : null}>
+            &nbsp;
+          </div>
 
-          <div className={styles.background}>&nbsp;</div>
-
-          <nav className={styles.respondDisplay}>
+          <nav
+            className={styles.respondNav}
+            style={isOpen ? respondDisplay : null}
+          >
             <ul>
               {listItem &&
                 listItem.map((list) => (

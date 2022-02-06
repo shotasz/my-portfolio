@@ -22,3 +22,61 @@ export const BoxContainer = styled.div`
     border-radius: 3px 0 0 3px;
   }
 `;
+
+export const StyleButton = styled.label`
+  background-color: var(--color-green);
+  height: 5rem;
+  width: 5rem;
+  position: fixed;
+  top: 2rem;
+  right: 2rem;
+  border-radius: 50%;
+  z-index: 2000;
+  text-align: center;
+  cursor: pointer;
+`;
+
+export const StyleIcon = styled.span`
+  position: relative;
+  margin-top: 2.3rem;
+
+  &,
+  &::before,
+  &::after {
+    width: 3rem;
+    height: 2px;
+    background-color: var(--color-lightest-navy);
+    display: inline-block;
+  }
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    transition: all 0.2s;
+  }
+
+  &::before {
+    top: -0.8rem;
+  }
+  &::after {
+    top: 0.8rem;
+  }
+
+  ${({ isOpen }) =>
+    isOpen &&
+    `
+  &::before {
+    top: 0;
+    transform: rotate(-135deg);
+  }
+  &::after {
+    top: 0;
+    transform: rotate(135deg);
+  }
+  & {
+    background-color: transparent;
+  }
+`}
+`;
