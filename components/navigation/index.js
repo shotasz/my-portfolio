@@ -91,6 +91,7 @@ export function Navigation(props) {
                     key={list.section}
                     id={list.id}
                     section={list.section}
+                    onClick={onToggle}
                   />
                 ))}
             </ul>
@@ -107,6 +108,8 @@ export function Navigation(props) {
                   key={list.section}
                   id={list.id}
                   section={list.section}
+                  fontsize
+                  bfFontsize
                 />
               ))}
           </ul>

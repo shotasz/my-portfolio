@@ -2,8 +2,6 @@ import styled from "styled-components";
 import { scrollToSection } from "../ui/utilities";
 
 const StyleList = styled.li`
-  font-size: 1.6rem;
-  font-family: var(--font-ubuntu);
   text-transform: capitalize;
   padding: 1rem 2rem;
 
@@ -22,13 +20,13 @@ const StyleList = styled.li`
     font-family: var(--font-roboto);
     font-weight: 300;
     color: var(--color-green);
-    font-size: 3rem;
+    font-size: ${(props) => props.bfFontsize};
     margin-right: 0.7rem;
   }
 
   a {
     color: var(--color-white);
-    font-size: 4rem;
+    font-size: ${(props) => props.fontsize};
     font-family: var(--font-ubuntu);
     font-weight: 700;
     letter-spacing: 1px;
@@ -43,8 +41,14 @@ const StyleList = styled.li`
 
 export function NavigationList(props) {
   const count = props.id.slice(1);
+
   return (
-    <StyleList id={count}>
+    <StyleList
+      id={count}
+      onClick={props.onClick}
+      fontsize={props.fontsize ? "2rem" : "3.5rem"}
+      bfFontsize={props.bfFontsize ? "2rem" : "2.5rem"}
+    >
       <a section={props.section} onClick={scrollToSection}>
         {props.section}
       </a>
