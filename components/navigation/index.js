@@ -62,6 +62,9 @@ export function Navigation(props) {
   const background = {
     transform: "scale(80)",
   };
+  const background2 = {
+    transform: "scale(1)",
+  };
 
   const respondDisplay = {
     opacity: "1",
@@ -76,7 +79,10 @@ export function Navigation(props) {
             <StyleIcon isOpen={isOpen}>&nbsp;</StyleIcon>
           </StyleButton>
 
-          <div className={styles.background} style={isOpen ? background : null}>
+          <div
+            className={styles.background}
+            style={isOpen ? background : background2}
+          >
             &nbsp;
           </div>
 
