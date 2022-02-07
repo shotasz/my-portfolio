@@ -42,14 +42,12 @@ const StyleList = styled.li`
 export function NavigationList(props) {
   const count = props.id.slice(1);
 
-  console.log(props);
-
   return (
     <StyleList
       id={count}
       onClick={props.onClick}
       fontsize={props.fontsize ? "2rem" : "3.5rem"}
-      bfFontsize={props.bfFontsize ? "2rem" : "2.5rem"}
+      bfFontsize={props.bfFontsize ? "1.6rem" : "2.5rem"}
     >
       <a onClick={scrollToSection} section={props.section}>
         {props.section}

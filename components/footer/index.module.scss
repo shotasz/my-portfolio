@@ -3,7 +3,7 @@
 .footer {
   grid-row: 6 / 7;
   grid-column: full-start / full-end;
-  margin: 4rem 4.4rem;
+  margin: 0;
 
   display: grid;
   grid-template-columns: min-content 1fr;
@@ -13,6 +13,7 @@
   @media screen and (max-width: $phone) {
     grid-row: 6 / 7;
     grid-column: center-start / center-end;
+    margin: 4rem auto;
 
     display: grid;
     grid-template-columns: 1fr;
@@ -43,6 +44,10 @@
       &:focus {
         color: var(--color-green);
       }
+    }
+
+    @media screen and (max-width: $phone) {
+      grid-column: 1 / -1;
     }
   }
 
