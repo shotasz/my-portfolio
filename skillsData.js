@@ -19,7 +19,7 @@ const MY_SKILLS = {
     },
     {
       id: "m3",
-      skill: "SASS",
+      skill: "Sass",
       description: "SASS画像",
       color: "#cd6699",
       percent: "70%",
@@ -27,7 +27,7 @@ const MY_SKILLS = {
     },
     {
       id: "m4",
-      skill: "JAVASCRIPT",
+      skill: "Javascript",
       description: "JAVASCRIPT画像",
       color: "#e4ba42",
       percent: "70%",
@@ -35,7 +35,7 @@ const MY_SKILLS = {
     },
     {
       id: "m5",
-      skill: "REACT",
+      skill: "React",
       description: "REACT画像",
       color: "#00acea",
       percent: "60%",
@@ -48,6 +48,30 @@ const MY_SKILLS = {
       color: "#cb3837",
       percent: "50%",
       icon: "./icons/icon-npm.svg",
+    },
+    {
+      id: "m7",
+      skill: "MongoDB",
+      description: "MONGODB画像",
+      color: "#599636",
+      percent: "50%",
+      icon: "./icons/icon-mongodb.svg",
+    },
+    {
+      id: "m8",
+      skill: "Typescript",
+      description: "TYPESCRIPT画像",
+      color: "#007acc",
+      percent: "50%",
+      icon: "./icons/icon-typescript.svg",
+    },
+    {
+      id: "m9",
+      skill: "GraphQL",
+      description: "GRAPHQL画像",
+      color: "#e10098",
+      percent: "50%",
+      icon: "./icons/icon-graphql.svg",
     },
   ],
   sections: [
