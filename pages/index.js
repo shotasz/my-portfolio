@@ -10,25 +10,27 @@ import { Works } from "../components/works";
 import { Contact } from "../components/contact";
 import { Footer } from "../components/footer";
 
-import { getMyData } from "../skillsData";
+import { connectToDatabase } from "../util/mongodb";
 import { Fragment } from "react";
 
-export function getStaticProps() {
-  const data = getMyData();
+export async function getServerSideProps() {
+  const { db } = await connectToDatabase();
+
+  const data = await db.collection("data").find().toArray();
 
   return {
     props: {
-      data,
+      data: JSON.parse(JSON.stringify(data)),
     },
-    revalidate: 4 * 60 * 60,
   };
 }
 
 export default function Home({ data }) {
+  const [items] = data;
   return (
     <main className={styles.container}>
       <Fragment>
-        <Navigation items={data.sections} />
+        <Navigation items={items.sections} />
 
         <SideLeft />
 
@@ -38,7 +40,7 @@ export default function Home({ data }) {
 
         <About />
 
-        <Skills items={data.skills} />
+        <Skills items={items.skills} />
 
         <Works />
 
