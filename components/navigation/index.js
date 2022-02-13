@@ -13,9 +13,8 @@ import {
   clearAllBodyScrollLocks,
 } from "body-scroll-lock";
 
-export function Navigation(props) {
-  const item = props.items;
-  const listItem = item.slice(1);
+export function Navigation({ items }) {
+  const listItem = items.slice(1);
 
   const ref = useRef();
 
@@ -94,8 +93,8 @@ export function Navigation(props) {
               {listItem &&
                 listItem.map((list) => (
                   <NavigationList
-                    key={list.section}
-                    id={list.id}
+                    key={list.id}
+                    count={list.count}
                     section={list.section}
                     onClick={onToggle}
                   />
@@ -111,8 +110,8 @@ export function Navigation(props) {
             {listItem &&
               listItem.map((list) => (
                 <NavigationList
-                  key={list.section}
-                  id={list.id}
+                  key={list.id}
+                  count={list.count}
                   section={list.section}
                   fontsize
                   bfFontsize

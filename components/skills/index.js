@@ -3,7 +3,6 @@ import SkillsList from "./skills-list";
 
 export function Skills({ items }) {
   const data = items;
-
   return (
     <section className={styles.skills} id="skills">
       <span className={styles.skills__section_start}>&lt;section&gt;</span>

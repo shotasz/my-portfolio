@@ -15,7 +15,7 @@ const StyleList = styled.li`
   }
 
   &::before {
-    content: "0${(props) => props.id - 1}.";
+    content: "0${(props) => props.count - 1}.";
     display: inline-block;
     font-family: var(--font-roboto);
     font-weight: 300;
@@ -40,11 +40,9 @@ const StyleList = styled.li`
 `;
 
 export function NavigationList(props) {
-  const count = props.id.slice(1);
-
   return (
     <StyleList
-      id={count}
+      count={props.count}
       onClick={props.onClick}
       fontsize={props.fontsize ? "2rem" : "3.5rem"}
       bfFontsize={props.bfFontsize ? "1.6rem" : "2.5rem"}
