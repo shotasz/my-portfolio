@@ -6,13 +6,12 @@ $phone: 480px;
 @mixin image {
   object-fit: cover;
   border-radius: 1rem;
-  background-color: var(--color-green);
-  filter: opacity(0.7);
+  cursor: pointer;
   transition: var(--transition);
 
   &:hover,
   &:focus {
-    filter: none;
+    filter: opacity(1);
   }
 }
 
@@ -71,6 +70,12 @@ $phone: 480px;
   color: var(--color-lightest-slate);
   font-size: 3.4rem;
   letter-spacing: 2px;
+  transition: var(--transition);
+
+  &:hover,
+  &:focus {
+    color: var(--color-green);
+  }
 }
 
 @mixin heading4 {

@@ -55,7 +55,6 @@ export function About() {
             src="/user-image.jpg"
             width={270}
             height={270}
-            placeholder="blur"
             quality="85"
             priority={true}
           />

@@ -20,6 +20,8 @@
   --transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
 
   --box-shadow: 0 2rem 4rem rgba(#000, 0.1);
+  --box-shadow-dark: 0 4rem 8rem rgba(#000, 0.3);
+
   --text-shadow: 0 2rem 4rem rgba(#000, 0.1);
 }
 
@@ -56,11 +58,33 @@ a {
   cursor: pointer;
   color: var(--color-slate);
   transition: var(--transition);
+  text-decoration: none;
 
   &:hover,
   &:focus {
     transform: translateY(-3px);
     color: var(--color-green);
+  }
+}
+
+i {
+  position: relative;
+  display: inline-block;
+  transition: 0.3s;
+
+  &::after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    content: "";
+    width: 0;
+    height: 1px;
+    background-color: var(--color-green);
+    transition: 0.3s;
+  }
+
+  &:hover::after {
+    width: 100%;
   }
 }
 
