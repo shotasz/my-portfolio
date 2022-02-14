@@ -89,155 +89,222 @@
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: repeat(6, 1fr);
   align-items: center;
+  transition: var(--transition);
+
+  @media screen and (max-width: $phoneWide) {
+    &:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 4rem 8rem rgba(#000, 0.2);
+    }
+  }
 
   @media screen and (max-width: $phone) {
     grid-row: 2 / 3;
     grid-column: 1 / -1;
   }
+}
 
-  &__img {
-    grid-column: 1 / 5;
-    grid-row: 1 / -1;
+.image {
+  grid-column: 1 / 5;
+  grid-row: 1 / -1;
 
-    width: fit-content;
-    position: relative;
-    z-index: 1;
+  position: relative;
+  z-index: 1;
+
+  span {
+    &::before {
+      content: "";
+      display: block;
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: var(--color-green);
+      border-radius: 1rem;
+      box-shadow: 0 1rem 3rem -1rem var(--color-navy);
+    }
 
     img {
+      filter: opacity(0.8);
       @include image;
-    }
-
-    &:hover,
-    &:focus {
-      filter: none;
-    }
-
-    @media screen and (max-width: $tablet) {
-      width: 95%;
-    }
-    @media screen and (max-width: $phoneWide) {
-      width: 90%;
-    }
-
-    @media screen and (max-width: $phone) {
-      grid-column: 1 / -1;
-      width: 100%;
-      filter: opacity(0.4);
-
-      &:hover,
-      &:focus {
-        filter: opacity(0.5);
-      }
     }
   }
 
-  &__content {
-    grid-column: 3 / -1;
+  @media screen and (max-width: $phoneWide) {
+    grid-column: 1 / -1;
     grid-row: 1 / -1;
-    text-align: right;
 
-    @media screen and (max-width: $phone) {
-      grid-column: 1 / -1;
-      text-align: left;
-      //height: 100%;
-
-      display: flex;
-      flex-direction: column;
-
-      position: relative;
-      z-index: 100;
-    }
-
-    h4 {
-      margin: 1rem 0;
-
-      @include heading4;
-
-      @media screen and (max-width: $phone) {
-        margin: 0 2rem;
-        font-size: 1.4rem;
-      }
-    }
-
-    h3 {
-      margin: 0 0 2rem;
-      position: relative;
-      z-index: 10;
-
-      @include heading3;
-
-      @media screen and (max-width: $phone) {
-        font-size: 2.2rem;
-        margin: 0 2rem;
-      }
-    }
-
-    p {
-      letter-spacing: 0.2rem;
-      line-height: 2.5rem;
-      padding: 2rem 3rem;
-      background-color: var(--color-light-navy);
-      box-shadow: var(--box-shadow);
-      border-radius: 1rem;
-      width: 100%;
-      text-align: left;
-
-      position: relative;
-      z-index: 10;
-
-      @include paragraph;
-
-      @media screen and (max-width: $phone) {
-        background-color: transparent;
-        font-size: 1.2rem;
-        line-height: 2rem;
-        padding: 1.5rem 2rem;
-      }
-    }
-
-    ul {
-      margin: 2.5rem 0 1rem;
-
-      display: flex;
-      justify-content: flex-end;
-      list-style: none;
-
-      @media screen and (max-width: $phone) {
-        margin: 0 2rem;
-      }
-
-      li {
-        font-family: var(--font-ubuntu);
-        font-weight: 300;
-        color: var(--color-lightest-slate);
-        font-size: 2rem;
-
-        &:not(:last-child) {
-          margin-right: 3rem;
-        }
-
-        @media screen and (max-width: $phone) {
-          font-size: 1.5rem;
-        }
-      }
-    }
-
-    div {
-      margin: 2.5rem 0 1rem;
-
-      svg {
-        cursor: pointer;
-        transition: var(--transition);
-
-        &:hover,
-        &:focus {
-          color: var(--color-green);
-        }
-      }
-
-      @media screen and (max-width: $phone) {
+    span {
+      &::before {
         display: none;
       }
+
+      img {
+        filter: opacity(0.3);
+      }
     }
+  }
+}
+
+.content {
+  grid-column: 3 / -1;
+  grid-row: 1 / -1;
+  text-align: right;
+
+  @media screen and (max-width: $phoneWide) {
+    grid-column: 1 / -1;
+    grid-row: 1 / -1;
+    height: 100%;
+    text-align: left;
+    padding: 2rem 4rem;
+    padding-top: 4.5rem;
+
+    position: relative;
+    z-index: 100;
+  }
+
+  @media screen and (max-width: $phone) {
+    padding: 2rem 2rem;
+    padding-top: 3rem;
+  }
+
+  h4 {
+    margin: 1rem 0;
+
+    @include heading4;
+
+    @media screen and (max-width: $phoneWide) {
+      margin: 1.5rem 2rem;
+      font-size: 2.2rem;
+    }
+
+    @media screen and (max-width: $phone) {
+      margin: 1rem 2rem;
+      font-size: 1.4rem;
+    }
+  }
+
+  h3 {
+    margin: 0 0 2rem;
+    position: relative;
+    z-index: 10;
+
+    @include heading3;
+
+    @media screen and (max-width: $phoneWide) {
+      margin: 0 2rem;
+      font-size: 3.2rem;
+    }
+
+    @media screen and (max-width: $phone) {
+      font-size: 2.2rem;
+      margin: 0 2rem;
+    }
+  }
+
+  p {
+    letter-spacing: 0.2rem;
+    line-height: 2.5rem;
+    padding: 2rem 3rem;
+    background-color: var(--color-light-navy);
+    box-shadow: var(--box-shadow);
+    border-radius: 1rem;
+    width: 100%;
+    text-align: left;
+    position: relative;
+    z-index: 10;
+
+    @include paragraph;
+
+    @media screen and (max-width: $phoneWide) {
+      background-color: transparent;
+      font-size: 1.8rem;
+      line-height: 2rem;
+      padding: auto 2rem;
+    }
+
+    @media screen and (max-width: $phone) {
+      background-color: transparent;
+      font-size: 1.2rem;
+      line-height: 2rem;
+      padding: 1rem 2rem;
+    }
+  }
+
+  ul {
+    margin: 2.5rem 0 1rem;
+    position: relative;
+    z-index: 10;
+
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+
+    @media screen and (max-width: $phoneWide) {
+      margin: 2rem;
+    }
+
+    @media screen and (max-width: $phone) {
+      margin: 0 2rem;
+    }
+
+    li {
+      font-family: var(--font-ubuntu);
+      font-weight: 300;
+      color: var(--color-lightest-slate);
+      font-size: 2rem;
+
+      &:not(:last-child) {
+        margin-right: 3rem;
+      }
+
+      @media screen and (max-width: $phoneWide) {
+        font-size: 2rem;
+      }
+
+      @media screen and (max-width: $phone) {
+        font-size: 1.5rem;
+      }
+    }
+  }
+}
+
+.link {
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    color: var(--color-green);
+    transform: none;
+  }
+}
+
+.icons {
+  margin: 2.5rem 0 1rem;
+  display: flex;
+  justify-content: flex-end;
+
+  div {
+    padding-left: 3rem;
+  }
+
+  svg {
+    cursor: pointer;
+    transition: var(--transition);
+
+    &:hover,
+    &:focus {
+      color: var(--color-green);
+    }
+  }
+
+  @media screen and (max-width: $phoneWide) {
+    margin: 3rem 2rem;
+    text-align: right;
+  }
+
+  @media screen and (max-width: $phone) {
+    margin: 1rem 2rem;
   }
 }

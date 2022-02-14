@@ -2,8 +2,8 @@ import React from "react";
 
 const IconGithub = () => (
   <svg
-    height="23px"
-    width="23px"
+    height="24px"
+    width="24px"
     viewBox="0 0 512 512"
     xmlns="http://www.w3.org/2000/svg"
   >

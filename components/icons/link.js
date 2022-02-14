@@ -2,10 +2,8 @@ import React from "react";
 
 const IconLink = () => (
   <svg
-    version="1.1"
-    id="Layer_1"
-    height="23px"
-    width="23px"
+    height="21px"
+    width="21px"
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 512 512"
   >

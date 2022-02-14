@@ -13,31 +13,53 @@ export function Works() {
       <span className={styles.works__h2_end}>&lt;/h2&gt;</span>
       <span className={styles.works__div_start}>&lt;div&gt;</span>
       <div className={styles.work}>
-        <div className={styles.work__img}>
-          <a href="/">
-            <Image
-              src="/kondatte-app.jpg"
-              width={600}
-              height={410}
-              placeholder="blur"
-              quality="85"
-              priority={true}
-            />
-          </a>
+        <div className={styles.image}>
+          <Image
+            src="/shota-ecommerce.png"
+            width={600}
+            height={410}
+            quality="85"
+            priority={true}
+          />
         </div>
-        <div className={styles.work__content}>
+        <div className={styles.content}>
           <h4>Featured Project</h4>
-          <h3>Kondatte App</h3>
+          <a
+            className={styles.link}
+            href="https://shota-ecommerce-kho3temw5-shotasz.vercel.app"
+            target="_blank"
+          >
+            <h3>E-Commerce App</h3>
+          </a>
+
           <p>
             ユーザーがアプリ内で自分用の献立リストを作ることができるアプリ。
             献立メニューを新規登録、編集、検索したり、カロリー表示も確認できるアプリ。
           </p>
+
           <ul>
             <li>Next.js</li>
             <li>Sass</li>
+            <li>MongoDB</li>
           </ul>
-          <div>
-            <IconGithub />
+
+          <div className={styles.icons}>
+            <div>
+              <a
+                href="https://github.com/shotasz/shota-ecommerce"
+                target="_blank"
+              >
+                <IconGithub />
+              </a>
+            </div>
+            <div>
+              <a
+                href="https://shota-ecommerce-kho3temw5-shotasz.vercel.app"
+                target="_blank"
+              >
+                <IconLink />
+              </a>
+            </div>
           </div>
         </div>
       </div>
