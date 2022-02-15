@@ -32,3 +32,34 @@ export function stickyNavHandler() {
 
   headerObserver.observe(hero);
 }
+
+///////////////////////////////////////////////////////////////
+
+export function revealSectionHandler() {
+  const allSections = document.querySelectorAll("section");
+
+  const revealSection = (entries, observer) => {
+    const [entry] = entries;
+
+    if (!entry.isIntersecting) return;
+
+    if (entry.target.id === "hero") return;
+
+    entry.target.style.opacity = "1";
+    //fadeUpAnimeグローバルに設定
+    entry.target.style.animation = "fadeUpAnime 0.75s ease-out 0s";
+
+    observer.unobserve(entry.target);
+  };
+
+  const sectionObserver = new IntersectionObserver(revealSection, {
+    root: null,
+    threshold: 0.15,
+  });
+
+  allSections.forEach((section) => {
+    sectionObserver.observe(section);
+    if (section.id === "hero") return;
+    section.style.opacity = "0";
+  });
+}

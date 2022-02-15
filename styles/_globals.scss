@@ -97,3 +97,15 @@ i,
 p {
   text-shadow: var(--text-shadow);
 }
+
+@keyframes fadeUpAnime {
+  from {
+    opacity: 0;
+    transform: translateY(8rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

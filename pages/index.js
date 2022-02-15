@@ -11,7 +11,8 @@ import { Contact } from "../components/contact";
 import { Footer } from "../components/footer";
 
 import { connectToDatabase } from "../util/mongodb";
-import { Fragment } from "react";
+import { Fragment, useEffect } from "react";
+import { revealSectionHandler } from "../components/ui/utilities";
 
 export async function getServerSideProps() {
   const { db } = await connectToDatabase();
@@ -27,6 +28,11 @@ export async function getServerSideProps() {
 
 export default function Home({ data }) {
   const [items] = data;
+
+  useEffect(() => {
+    revealSectionHandler();
+  }, []);
+
   return (
     <main className={styles.container}>
       <Fragment>
