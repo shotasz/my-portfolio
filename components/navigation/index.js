@@ -1,11 +1,9 @@
 import styles from "./index.module.scss";
 import HeaderLogo from "../icons/s-logo";
 import { NavigationList } from "./navigation-list";
-import { scrollToSection, stickyNavHandler } from "../ui/utilities";
+import { stickyNavHandler } from "../ui/utilities";
 import { useEffect, useRef, useState } from "react";
 import { StyleIcon, StyleButton } from "../ui/ui";
-
-import { useDisclosure } from "@chakra-ui/react";
 
 import {
   disableBodyScroll,
@@ -18,8 +16,9 @@ export function Navigation({ items }) {
 
   const ref = useRef();
 
-  const [mobileNav, setMobileNav] = useState();
-  const [mobileWideNav, setMobileWideNav] = useState();
+  const [isOpenWindow, setIsOpenWindow] = useState(false);
+  const [mobileNav, setMobileNav] = useState(false);
+  const [mobileWideNav, setMobileWideNav] = useState(false);
 
   function handleResizeNav() {
     function handleResize() {
@@ -39,11 +38,9 @@ export function Navigation({ items }) {
     return () => window.removeEventListener("resize", handleResize);
   }
 
-  const { isOpen, onToggle } = useDisclosure();
-
   useEffect(() => {
     if (ref.current) {
-      if (isOpen) {
+      if (isOpenWindow) {
         disableBodyScroll(ref.current);
       } else {
         enableBodyScroll(ref.current);
@@ -56,7 +53,7 @@ export function Navigation({ items }) {
     return () => {
       clearAllBodyScrollLocks();
     };
-  }, [isOpen]);
+  }, [isOpenWindow]);
 
   const background = {
     transform: "scale(80)",
@@ -74,20 +71,20 @@ export function Navigation({ items }) {
     <header ref={ref} className={styles.header}>
       {mobileNav && (
         <div>
-          <StyleButton onClick={onToggle}>
-            <StyleIcon isOpen={isOpen}>&nbsp;</StyleIcon>
+          <StyleButton onClick={() => setIsOpenWindow(!isOpenWindow)}>
+            <StyleIcon isOpen={isOpenWindow}>&nbsp;</StyleIcon>
           </StyleButton>
 
           <div
             className={styles.background}
-            style={isOpen ? background : background2}
+            style={isOpenWindow ? background : background2}
           >
             &nbsp;
           </div>
 
           <nav
             className={styles.respondNav}
-            style={isOpen ? respondDisplay : null}
+            style={isOpenWindow ? respondDisplay : null}
           >
             <ul>
               {listItem &&
@@ -96,7 +93,7 @@ export function Navigation({ items }) {
                     key={list.id}
                     count={list.count}
                     section={list.section}
-                    onClick={onToggle}
+                    onClick={() => setIsOpenWindow(!isOpenWindow)}
                   />
                 ))}
             </ul>

@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { scrollToSection } from "../ui/utilities";
 
 const StyleList = styled.li`
-  text-transform: capitalize;
+  text-transform: uppercase;
   padding: 1rem 2rem;
 
   &:link,
@@ -29,7 +29,6 @@ const StyleList = styled.li`
     font-size: ${(props) => props.fontsize};
     font-family: var(--font-ubuntu);
     font-weight: 700;
-    letter-spacing: 1px;
     text-decoration: none;
 
     &:hover,
