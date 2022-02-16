@@ -1,12 +1,18 @@
 export function scrollToSection(entry) {
+  entry.preventDefault();
   const getSection = entry.target.closest("a").getAttribute("section");
-  const nav = document.querySelector("header");
 
-  const log = document
-    .querySelector(`#${getSection}`)
-    .scrollIntoView({ behavior: "smooth" });
+  const scrollTo = () => {
+    document
+      .querySelector(`#${getSection}`)
+      .scrollIntoView({ behavior: "smooth" });
+  };
 
-  return log;
+  scrollTo();
+
+  // const log = document
+  //   .querySelector(`#${getSection}`)
+  //   .scrollIntoView({ behavior: "smooth" });
 }
 
 export function stickyNavHandler() {
@@ -63,3 +69,5 @@ export function revealSectionHandler() {
     section.style.opacity = "0";
   });
 }
+
+///////////////////////////////////////////////////////////////
