@@ -100,12 +100,31 @@
   }
 
   &__div_end {
-    grid-row: 7 / 8;
+    grid-row: 8 / 9;
     grid-column: 2 / 3;
   }
 
   &__section_end {
-    grid-row: 8 / 9;
+    grid-row: 9 / 10;
     grid-column: 1 / 2;
+  }
+}
+
+.show_components {
+  grid-row: 7 / 8;
+  grid-column: 2 / span 2;
+
+  @include btnDesign;
+  padding: 1rem 2rem;
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+  border: 2px solid var(--color-green);
+  text-transform: uppercase;
+
+  justify-self: center;
+
+  @media screen and (max-width: $phone) {
+    grid-column: 1 / -1;
+    grid-row: 3 /4;
   }
 }
