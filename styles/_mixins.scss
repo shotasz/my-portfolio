@@ -61,6 +61,10 @@ $phone: 480px;
     max-width: 30rem;
     background-color: var(--color-slate);
     align-self: center;
+
+    @media screen and (max-width: $phone) {
+      max-width: 8rem;
+    }
   }
 }
 
