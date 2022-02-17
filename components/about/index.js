@@ -52,7 +52,7 @@ export function About() {
         </p>
         <div className={styles.image}>
           <Image
-            src="/user-image.jpg"
+            src="/user-image-2.JPG"
             width={270}
             height={270}
             quality="85"
