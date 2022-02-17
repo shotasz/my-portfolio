@@ -1,6 +1,7 @@
-import { useState } from "react/cjs/react.development";
 import styles from "./index.module.scss";
 import SkillsList from "./skills-list";
+
+import { useState } from "react";
 
 export function Skills({ items }) {
   const data = items;
