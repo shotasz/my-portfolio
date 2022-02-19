@@ -1,5 +1,9 @@
 import styles from "./index.module.scss";
 
+const scrollTo = () => {
+  document.querySelector("#contact").scrollIntoView({ behavior: "smooth" });
+};
+
 export function Hero() {
   return (
     <section className={styles.hero} id="hero">
@@ -22,7 +26,9 @@ export function Hero() {
 
       <span className={styles.hero__btn_start}>&lt;button&gt;</span>
 
-      <button className={styles.btn}>CONTACT ME</button>
+      <button className={styles.btn} onClick={() => scrollTo()}>
+        CONTACT ME
+      </button>
 
       <span className={styles.hero__btn_end}>&lt;/button&gt;</span>
       <span className={styles.hero__hero_end}>&lt;/section&gt;</span>

@@ -22,7 +22,7 @@ export function About() {
       <span className={styles.about__p_end}>&lt;/p&gt;</span>
       <span className={styles.about__div_start}>&lt;div&gt;</span>
       <div className={styles.content}>
-        <h4>I've been working with</h4>
+        <h4>I've been working with...</h4>
         <p>
           主に
           <i>React</i>をメインに開発を進めていて、フレームワークは

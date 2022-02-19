@@ -23,6 +23,10 @@
     }
   }
 
+  a {
+    color: var(--color-green);
+  }
+
   button {
     grid-column: 3 / 4;
     grid-row: 8 / 9;
