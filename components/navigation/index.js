@@ -102,20 +102,25 @@ export function Navigation({ items }) {
       )}
 
       {mobileWideNav && (
-        <nav className={styles.nav}>
-          <ul>
-            {listItem &&
-              listItem.map((list) => (
-                <NavigationList
-                  key={list.id}
-                  count={list.count}
-                  section={list.section}
-                  fontsize
-                  bfFontsize
-                />
-              ))}
-          </ul>
-        </nav>
+        <>
+          <div className={styles.box}>
+            <span className={styles.logo}>S</span>
+          </div>
+          <nav className={styles.nav}>
+            <ul>
+              {listItem &&
+                listItem.map((list) => (
+                  <NavigationList
+                    key={list.id}
+                    count={list.count}
+                    section={list.section}
+                    fontsize
+                    bfFontsize
+                  />
+                ))}
+            </ul>
+          </nav>
+        </>
       )}
     </header>
   );

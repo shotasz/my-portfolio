@@ -5,7 +5,7 @@
 
   @media screen and (max-width: $phoneWide) {
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: center;
 
     top: 0;
@@ -69,4 +69,54 @@
   right: 2rem;
   z-index: 1000;
   transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
+}
+
+.box {
+  height: 3.5rem;
+  width: 3.5rem;
+  margin: 0 3rem;
+  display: flex;
+  border-radius: 5px;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-green);
+}
+
+.logo {
+  height: 3rem;
+  width: 3rem;
+  border: 1px solid var(--color-green);
+  border-radius: 5px;
+  font-family: var(--font-roboto);
+  font-size: 1.2rem;
+  color: var(--color-green);
+  padding-left: 3px;
+  box-shadow: 0 0 0 var(--color-green);
+  transition: var(--transition);
+  position: relative;
+
+  &::before {
+    content: "_";
+    position: absolute;
+    top: 0;
+    left: 1rem;
+    opacity: 0;
+  }
+
+  &:hover {
+    box-shadow: 0 0 1rem var(--color-green);
+
+    &::before {
+      animation: hoverOpacity 1s infinite;
+    }
+  }
+}
+
+@keyframes hoverOpacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
