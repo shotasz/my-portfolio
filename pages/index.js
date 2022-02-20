@@ -30,7 +30,16 @@ export default function Home({ data }) {
   const [items] = data;
 
   useEffect(() => {
-    revealSectionHandler();
+    function handleResize() {
+      if (window.innerWidth > 480) {
+        revealSectionHandler();
+      }
+    }
+    window.addEventListener("resize", handleResize);
+
+    handleResize();
+
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   return (

@@ -9,10 +9,6 @@ export function scrollToSection(entry) {
   };
 
   scrollTo();
-
-  // const log = document
-  //   .querySelector(`#${getSection}`)
-  //   .scrollIntoView({ behavior: "smooth" });
 }
 
 export function stickyNavHandler() {
