@@ -1,8 +1,17 @@
 import styles from "./index.module.scss";
 
-const scrollTo = () => {
-  document.querySelector("#contact").scrollIntoView({ behavior: "smooth" });
-};
+function scrollToSection(entry) {
+  entry.preventDefault();
+  const contactSection = document
+    .querySelector("#contact")
+    .getBoundingClientRect();
+
+  window.scrollTo({
+    left: contactSection.left + window.pageXOffset,
+    top: contactSection.top + window.pageYOffset,
+    behavior: "smooth",
+  });
+}
 
 export function Hero() {
   return (
@@ -26,7 +35,7 @@ export function Hero() {
 
       <span className={styles.hero__btn_start}>&lt;button&gt;</span>
 
-      <button className={styles.btn} onClick={() => scrollTo()}>
+      <button className={styles.btn} onClick={scrollToSection}>
         CONTACT ME
       </button>
 
