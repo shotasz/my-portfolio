@@ -34,7 +34,7 @@ export function Hero() {
 
       <span className={styles.hero__btn_start}>&lt;button&gt;</span>
 
-      <button className={styles.btn} onClick={scrollToSection}>
+      <button className={styles.btn} onClick={() => scrollToSection()}>
         CONTACT ME
       </button>
 
