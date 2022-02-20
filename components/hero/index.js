@@ -1,12 +1,11 @@
 import styles from "./index.module.scss";
 
-function scrollToSection(entry) {
-  entry.preventDefault();
+function scrollToSection() {
   const contactSection = document
     .querySelector("#contact")
     .getBoundingClientRect();
 
-  window.scrollTo({
+  return window.scrollTo({
     left: contactSection.left + window.pageXOffset,
     top: contactSection.top + window.pageYOffset,
     behavior: "smooth",
