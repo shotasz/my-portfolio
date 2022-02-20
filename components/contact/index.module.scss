@@ -9,6 +9,7 @@
   grid-template-columns: repeat(2, min-content) 1fr 1fr 6rem;
   grid-template-rows: repeat(7, min-content);
   grid-row-gap: 2rem;
+  scroll-behavior: smooth;
 
   @media screen and (max-width: $tablet) {
     margin: 8rem 4.4rem;
