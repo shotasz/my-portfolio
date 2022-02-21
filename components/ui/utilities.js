@@ -1,5 +1,4 @@
 export function scrollToSection(entry) {
-  entry.preventDefault();
   const getSection = entry.target.closest("a").getAttribute("section");
 
   const scrollTo = () => {

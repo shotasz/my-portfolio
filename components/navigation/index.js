@@ -93,7 +93,8 @@ export function Navigation({ items }) {
                     key={list.id}
                     count={list.count}
                     section={list.section}
-                    onClick={() => setIsOpenWindow(!isOpenWindow)}
+                    isOpen={isOpenWindow}
+                    setIsOpen={setIsOpenWindow}
                   />
                 ))}
             </ul>

@@ -1,3 +1,4 @@
+import { useEffect } from "react/cjs/react.development";
 import styled from "styled-components";
 import { scrollToSection } from "../ui/utilities";
 
@@ -39,15 +40,26 @@ const StyleList = styled.li`
 `;
 
 export function NavigationList(props) {
+  const { count, section, fontsize, bfFontsize, isOpen, setIsOpen } = props;
+
+  const toggleHandler = (value) => {
+    if (isOpen) {
+      const returnValue = setIsOpen(!isOpen);
+    }
+
+    return document
+      .querySelector(`#${value}`)
+      .scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <StyleList
-      count={props.count}
-      onClick={props.onClick}
-      fontsize={props.fontsize ? "2rem" : "3.5rem"}
-      bfFontsize={props.bfFontsize ? "1.6rem" : "2.5rem"}
+      count={count}
+      fontsize={fontsize ? "2rem" : "3.5rem"}
+      bfFontsize={bfFontsize ? "1.6rem" : "2.5rem"}
     >
-      <a onClick={scrollToSection} section={props.section}>
-        {props.section}
+      <a onClick={() => toggleHandler(props.section)} section={section}>
+        {section}
       </a>
     </StyleList>
   );
