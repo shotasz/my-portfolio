@@ -40,17 +40,8 @@ const StyleList = styled.li`
 `;
 
 export function NavigationList(props) {
-  const { count, section, fontsize, bfFontsize, isOpen, setIsOpen } = props;
-
-  const toggleHandler = (value) => {
-    if (isOpen) {
-      const returnValue = setIsOpen(!isOpen);
-    }
-
-    return document
-      .querySelector(`#${value}`)
-      .scrollIntoView({ behavior: "smooth" });
-  };
+  const { count, section, fontsize, bfFontsize, isOpen, setIsOpen, mobile } =
+    props;
 
   return (
     <StyleList
@@ -58,7 +49,11 @@ export function NavigationList(props) {
       fontsize={fontsize ? "2rem" : "3.5rem"}
       bfFontsize={bfFontsize ? "1.6rem" : "2.5rem"}
     >
-      <a onClick={() => toggleHandler(props.section)} section={section}>
+      <a
+        href={mobile ? `#${section}` : null}
+        onClick={mobile ? () => setIsOpen(!isOpen) : scrollToSection}
+        section={section}
+      >
         {section}
       </a>
     </StyleList>

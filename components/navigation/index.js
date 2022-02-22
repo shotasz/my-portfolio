@@ -95,6 +95,7 @@ export function Navigation({ items }) {
                     section={list.section}
                     isOpen={isOpenWindow}
                     setIsOpen={setIsOpenWindow}
+                    mobile={mobileNav}
                   />
                 ))}
             </ul>
