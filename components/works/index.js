@@ -26,7 +26,7 @@ export function Works() {
           <h4>Featured Project</h4>
           <a
             className={styles.link}
-            href="https://shota-ecommerce-kho3temw5-shotasz.vercel.app"
+            href="https://shota-ecommerce.vercel.app"
             target="_blank"
           >
             <h3>E-Commerce App</h3>

@@ -46,9 +46,10 @@ export function revealSectionHandler() {
 
     if (entry.target.id === "hero") return;
 
-    entry.target.style.opacity = "1";
+    // entry.target.style.transform = "translateY(50px)";
     //fadeUpAnimeグローバルに設定
-    entry.target.style.animation = "fadeUpAnime 0.75s ease-out 0s";
+    entry.target.style.opacity = "1";
+    entry.target.style.animation = "fadeUpAnime 0.75s ease-out";
 
     observer.unobserve(entry.target);
   };
@@ -62,6 +63,7 @@ export function revealSectionHandler() {
     sectionObserver.observe(section);
     if (section.id === "hero") return;
     section.style.opacity = "0";
+    // section.style.transform = "translateY(0)";
   });
 }
 
