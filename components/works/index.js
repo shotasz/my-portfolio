@@ -33,14 +33,15 @@ export function Works() {
           </a>
 
           <p>
-            ユーザーがアプリ内で自分用の献立リストを作ることができるアプリ。
-            献立メニューを新規登録、編集、検索したり、カロリー表示も確認できるアプリ。
+            アパレルブランドのECコマース。 Shopify graphQL
+            APIを使って、Shopifyの管理画面で商品のタイトル、値段、サイズ、色、コメントを登録したのち、同サイトに反映され、ユーザーがさまざまな在庫の中から自由に選び、カートに入れ、購入できるシステム。
           </p>
 
           <ul>
             <li>Next.js</li>
-            <li>Sass</li>
-            <li>MongoDB</li>
+            <li>Typescript</li>
+            <li>TailwindCSS</li>
+            <li>Shopify graphQL API</li>
           </ul>
 
           <div className={styles.icons}>
