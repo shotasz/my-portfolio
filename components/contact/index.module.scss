@@ -62,6 +62,7 @@
       grid-row: 1 / 2;
       grid-column: 1 / -1;
       padding-top: 20rem;
+      margin: 0 auto;
     }
   }
 
@@ -80,6 +81,10 @@
     @media screen and (max-width: $phone) {
       grid-row: 2 / 3;
       grid-column: 1 / -1;
+
+      a {
+        margin: 0 auto;
+      }
     }
   }
 }
