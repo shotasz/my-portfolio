@@ -8,7 +8,7 @@ export const BoxContainer = styled.div`
   border-radius: 3px;
   justify-self: center;
 
-  ::before {
+  &::before {
     content: "";
     display: block;
     height: 100%;

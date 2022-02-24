@@ -9,7 +9,9 @@ export function Contact() {
       <span className={styles.contact__h2_end}>&lt;/h2&gt;</span>
       <div>
         <span className={styles.contact__button_start}>&lt;button&gt;</span>
-        <button className={styles.btn}>SEND MAIL</button>
+        <a href="mailto:s2shota123@gmail.com" target="_blank">
+          <button className={styles.btn}>SEND MAIL</button>
+        </a>
         <span className={styles.contact__button_end}>&lt;/button&gt;</span>
       </div>
       <span className={styles.contact__section_end}>&lt;/section&gt;</span>
