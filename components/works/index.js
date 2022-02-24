@@ -54,10 +54,7 @@ export function Works() {
               </a>
             </div>
             <div>
-              <a
-                href="https://shota-ecommerce-kho3temw5-shotasz.vercel.app"
-                target="_blank"
-              >
+              <a href="https://shota-ecommerce.vercel.app" target="_blank">
                 <IconLink />
               </a>
             </div>
