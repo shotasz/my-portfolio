@@ -32,6 +32,26 @@
 
   li {
     margin-bottom: 2.5rem;
+    position: relative;
+
+    // a {
+    //   overflow: hidden;
+
+    //   &::before {
+    //     content: "hello";
+    //     font-size: 1.2rem;
+    //     position: absolute;
+    //     top: 0;
+    //     left: 0;
+    //     visibility: hidden;
+    //     transition: transform 0.55s;
+    //   }
+
+    //   &:hover::before {
+    //     transform: translateY(-20px);
+    //     visibility: visible;
+    //   }
+    // }
   }
   @include navSvg;
 }
