@@ -1,6 +1,6 @@
 import styles from "../styles/Home.module.scss";
 
-import { Navigation } from "../components/navigation";
+import { Header } from "../components/header";
 import { Hero } from "../components/hero";
 import { SideLeft } from "../components/sidebar/sideleft";
 import { SideRight } from "../components/sidebar/sideright";
@@ -11,8 +11,6 @@ import { Contact } from "../components/contact";
 import { Footer } from "../components/footer";
 
 import { connectToDatabase } from "../util/mongodb";
-import { Fragment, useEffect } from "react";
-import { revealSectionHandler } from "../components/ui/utilities";
 
 export async function getServerSideProps() {
   const { db } = await connectToDatabase();
@@ -29,40 +27,25 @@ export async function getServerSideProps() {
 export default function Home({ data }) {
   const [items] = data;
 
-  useEffect(() => {
-    function handleResize() {
-      if (window.innerWidth > 480) {
-        revealSectionHandler();
-      }
-    }
-    window.addEventListener("resize", handleResize);
-
-    handleResize();
-
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
-
   return (
     <main className={styles.container}>
-      <Fragment>
-        <Navigation items={items.sections} />
+      <Header />
 
-        <SideLeft />
+      <SideLeft />
 
-        <SideRight />
+      <SideRight />
 
-        <Hero />
+      <Hero />
 
-        <About />
+      <About />
 
-        <Skills items={items.skills} />
+      <Skills items={items.skills} />
 
-        <Works />
+      <Works />
 
-        <Contact />
+      <Contact />
 
-        <Footer />
-      </Fragment>
+      <Footer />
     </main>
   );
 }
