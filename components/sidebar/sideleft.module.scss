@@ -79,6 +79,10 @@
 }
 
 .active {
-  padding-bottom: 1rem;
-  border: 3px solid var(--color-green);
+  border-bottom: 0.7rem;
+  border-bottom: 3px solid var(--color-green);
+
+  svg {
+    color: var(--color-green);
+  }
 }
