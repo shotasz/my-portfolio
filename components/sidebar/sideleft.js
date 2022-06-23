@@ -1,5 +1,6 @@
 import styles from "./sideleft.module.scss";
 
+import { Link } from "react-scroll";
 import IconTwitter from "../icons/twitter";
 import IconGithub from "../icons/github";
 import IconHome from "../icons/home";
@@ -8,36 +9,69 @@ import IconSettings from "../icons/settings";
 import IconVision from "../icons/vision";
 import IconEmail from "../icons/email";
 
-import { scrollToSection } from "../ui/utilities";
-
 export function SideLeft() {
   return (
     <div className={styles.navigation}>
       <ul className={styles.list}>
         <li>
-          <a section="hero" onClick={scrollToSection}>
+          <Link
+            activeClass={styles.active}
+            to="hero"
+            spy={true}
+            smooth={true}
+            offset={-50}
+            duration={500}
+          >
             <IconHome />
-          </a>
+          </Link>
         </li>
         <li>
-          <a section="about" onClick={scrollToSection}>
+          <Link
+            activeClass={styles.active}
+            to="about"
+            spy={true}
+            smooth={true}
+            offset={-50}
+            duration={500}
+          >
             <IconUser />
-          </a>
+          </Link>
         </li>
         <li>
-          <a section="skills" onClick={scrollToSection}>
+          <Link
+            activeClass={styles.active}
+            to="skills"
+            spy={true}
+            smooth={true}
+            offset={-50}
+            duration={500}
+          >
             <IconSettings />
-          </a>
+          </Link>
         </li>
         <li>
-          <a section="works" onClick={scrollToSection}>
+          <Link
+            activeClass={styles.active}
+            to="works"
+            spy={true}
+            smooth={true}
+            offset={-50}
+            duration={500}
+          >
             <IconVision />
-          </a>
+          </Link>
         </li>
         <li>
-          <a section="contact" onClick={scrollToSection}>
+          <Link
+            activeClass={styles.active}
+            to="contact"
+            spy={true}
+            smooth={true}
+            offset={-50}
+            duration={400}
+          >
             <IconEmail />
-          </a>
+          </Link>
         </li>
       </ul>
 
