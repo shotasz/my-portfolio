@@ -56,7 +56,7 @@ export function Header() {
                 to="about"
                 spy={true}
                 smooth={true}
-                offset={50}
+                offset={-50}
                 duration={500}
                 onClick={mobileToggleHandler}
               >
@@ -69,7 +69,7 @@ export function Header() {
                 to="skills"
                 spy={true}
                 smooth={true}
-                offset={50}
+                offset={-50}
                 duration={500}
                 onClick={mobileToggleHandler}
               >
@@ -82,15 +82,27 @@ export function Header() {
                 to="works"
                 spy={true}
                 smooth={true}
-                offset={50}
+                offset={-50}
                 duration={500}
                 onClick={mobileToggleHandler}
               >
                 Works
               </Link>
             </li>
+            <li>
+              <Link
+                activeClass={styles.active}
+                to="contact"
+                spy={true}
+                smooth={true}
+                offset={-50}
+                duration={500}
+                onClick={mobileToggleHandler}
+              >
+                Contact
+              </Link>
+            </li>
           </ul>
-          <button className={styles.btn}>Contact</button>
         </nav>
         <div className={styles.header__content__toggle}>
           {!menuOpen ? (
