@@ -24,7 +24,7 @@
   @media screen and (max-width: $phone) {
     grid-row: 4 / 5;
     grid-column: center-start / center-end;
-    margin: 0;
+    margin: 8rem 0rem;
 
     display: grid;
     grid-template-columns: 1fr;
@@ -101,6 +101,13 @@
   @media screen and (max-width: $phone) {
     grid-row: 2 / 3;
     grid-column: 1 / -1;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    border: 1px dashed var(--color-green);
+    border-radius: 1rem;
   }
 }
 
@@ -128,6 +135,10 @@
     img {
       filter: opacity(0.8);
       @include image;
+
+      @media screen and (max-width: $phone) {
+        border-radius: 1rem 1rem 0 0;
+      }
     }
   }
 
@@ -165,8 +176,7 @@
   }
 
   @media screen and (max-width: $phone) {
-    padding: 2rem 2rem;
-    padding-top: 3rem;
+    padding: 0;
   }
 
   h4 {
@@ -180,7 +190,7 @@
     }
 
     @media screen and (max-width: $phone) {
-      margin: 0 2rem;
+      margin-bottom: 1rem;
       font-size: 1.4rem;
     }
   }
@@ -303,5 +313,6 @@
 
   @media screen and (max-width: $phone) {
     margin: 0 2rem;
+    padding: 1rem 0;
   }
 }
