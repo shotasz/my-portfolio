@@ -24,7 +24,7 @@
   @media screen and (max-width: $phone) {
     grid-row: 3 / 4;
     grid-column: center-start / center-end;
-    margin: 0;
+    margin: 8rem 0;
 
     display: grid;
     grid-template-columns: 1fr;
