@@ -21,7 +21,6 @@
   @media screen and (max-width: $phone) {
     grid-row: 5 / 6;
     grid-column: center-start / center-end;
-    margin: 12rem 0;
 
     display: grid;
     grid-template-columns: 1fr;
@@ -61,7 +60,7 @@
     @media screen and (max-width: $phone) {
       grid-row: 1 / 2;
       grid-column: 1 / -1;
-      padding-top: 20rem;
+      // padding-top: 20rem;
       margin: 0 auto;
     }
   }
