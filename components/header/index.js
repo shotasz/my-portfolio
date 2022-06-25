@@ -95,7 +95,7 @@ export function Header() {
                 to="contact"
                 spy={true}
                 smooth={true}
-                offset={-50}
+                offset={-100}
                 duration={500}
                 onClick={mobileToggleHandler}
               >
