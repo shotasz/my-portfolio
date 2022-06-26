@@ -1,12 +1,12 @@
 @import "/styles/mixins";
 
 .hero {
+  grid-row: 1 / 2;
+  grid-column: full-start / full-end;
+
   display: grid;
   grid-template-rows: repeat(10, 1fr);
   grid-template-columns: repeat(5, minmax(min-content, max-content)) 1fr;
-
-  grid-row: 1 / 2;
-  grid-column: full-start / full-end;
 
   @media screen and (max-width: $phone) {
     grid-row: 1 / 2;
