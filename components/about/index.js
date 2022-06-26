@@ -27,9 +27,7 @@ export function About() {
           主に
           <i>React</i>をメインに開発を進めていて、フレームワークは
           <i>Nextjs</i>
-          を使っています。
-          <br />
-          他にもポートフォリオ用にShopify GraphQL
+          を使っています。 他にもポートフォリオ用にShopify GraphQL
           APIを使って、最低限の機能を用いた架空のECサイトを制作し、 技術には
           <i>graphQL</i>、<i>Typescript</i>、<i>TailwindCSS</i>
           を採用しています。URL、Githubも確認できますので、良かったら見てみて下さい。
