@@ -23,13 +23,11 @@ export function Contact() {
   const [enteredName, setEnteredName] = useState("");
   const [enteredMessage, setEnteredMessage] = useState("");
   const [requestStatus, setRequestStatus] = useState(); // 'pending', 'success', 'error'
-  // const [requestError, setRequestError] = useState();
 
   useEffect(() => {
     if (requestStatus === "success" || requestStatus === "error") {
       const timer = setTimeout(() => {
         setRequestStatus(null);
-        // setRequestError(null);
       }, 3000);
 
       return () => clearTimeout(timer);
@@ -52,7 +50,6 @@ export function Contact() {
       setEnteredEmail("");
       setEnteredName("");
     } catch (error) {
-      // setRequestError(error.message);
       setRequestStatus("error");
     }
   }
