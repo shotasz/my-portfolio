@@ -1,0 +1,67 @@
+@import "/styles/mixins";
+
+.notification {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--color-white);
+  background-color: var(--color-pending-100);
+  padding: 0 3rem;
+  box-shadow: var(--box-shadow);
+  border-radius: 0.5rem;
+  position: fixed;
+  height: 5.1rem;
+  top: 90px;
+  right: -50%;
+  width: 30%;
+  z-index: 1000;
+
+  animation: fadeIn 0.5s ease-in;
+  animation-fill-mode: both;
+
+  & h3 {
+    font-size: 1.8rem;
+    margin: 0;
+  }
+
+  & p {
+    font-size: 1.4rem;
+    margin: 0;
+  }
+
+  @media screen and (max-width: $tablet) {
+    width: 40%;
+  }
+  @media screen and (max-width: $phoneWide) {
+    width: 45%;
+  }
+  @media screen and (max-width: $phone) {
+    width: 65%;
+    padding: 0 1.5rem;
+
+    & h3 {
+      font-size: 1.5rem;
+    }
+
+    & p {
+      font-size: 1rem;
+    }
+  }
+}
+
+.success {
+  background-color: var(--color-success-500);
+}
+
+.error {
+  background-color: var(--color-error-500);
+}
+
+@keyframes fadeIn {
+  0% {
+    right: -50%;
+  }
+  100% {
+    right: 1%;
+  }
+}
