@@ -45,6 +45,8 @@ export default function Home({ data }) {
 
       <Contact />
 
+      <div id="notifications"></div>
+
       <Footer />
     </main>
   );
