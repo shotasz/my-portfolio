@@ -1,0 +1,18 @@
+.active {
+  opacity: 1;
+  animation: fadeUpAnime 0.75s ease-in;
+}
+
+.disactive {
+  opacity: 0;
+}
+
+@keyframes fadeUpAnime {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
