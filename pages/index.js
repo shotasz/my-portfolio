@@ -1,6 +1,3 @@
-import styles from "../styles/Home.module.scss";
-
-import { Header } from "../components/header";
 import { Hero } from "../components/hero";
 import { SideLeft } from "../components/sidebar/sideleft";
 import { SideRight } from "../components/sidebar/sideright";
@@ -11,6 +8,7 @@ import { Contact } from "../components/contact";
 import { Footer } from "../components/footer";
 
 import { connectToDatabase } from "../util/mongodb";
+import { Fragment } from "react";
 
 export async function getServerSideProps() {
   const { db } = await connectToDatabase();
@@ -28,9 +26,7 @@ export default function Home({ data }) {
   const [items] = data;
 
   return (
-    <main className={styles.container}>
-      <Header />
-
+    <Fragment>
       <SideLeft />
 
       <SideRight />
@@ -48,6 +44,6 @@ export default function Home({ data }) {
       <div id="notifications"></div>
 
       <Footer />
-    </main>
+    </Fragment>
   );
 }

@@ -1,11 +1,12 @@
-import { Header } from "../header";
 import styles from "./index.module.scss";
+import { Header } from "../header";
+import { Fragment } from "react";
 
-export function Layout({ children }) {
+export function Layout(props) {
   return (
-    <>
+    <Fragment>
       <Header />
-      <div className={styles.container}>{children}</div>
-    </>
+      <main className={styles.container}>{props.children}</main>
+    </Fragment>
   );
 }

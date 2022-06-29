@@ -1,14 +1,14 @@
 import "../styles/_globals.scss";
 
 import { Headline } from "../components/headline";
-import { Fragment } from "react";
+import { Layout } from "../components/layout";
 
 function MyApp({ Component, pageProps }) {
   return (
-    <Fragment>
+    <Layout>
       <Headline />
       <Component {...pageProps} />
-    </Fragment>
+    </Layout>
   );
 }
 

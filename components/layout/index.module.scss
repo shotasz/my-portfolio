@@ -1,15 +1,21 @@
-@import "./../../styles//variables.scss";
+@import "/styles/mixins";
 
 .container {
-  height: calc(100vh - #{$headerHeight});
-  background: $bg;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: grid;
+  grid-template-rows: 100vh repeat(5, min-content);
+  grid-template-columns:
+    [sidebarL-start] 8rem [sidebarL-end full-start] minmax(6rem, 1fr)
+    [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end])
+    [center-end] minmax(6rem, 1fr)
+    [full-end sidebarR-start] 8rem [sidebarR-end];
 
-  h1 {
-    padding: 1.5rem 2.5rem;
-    background: linear-gradient(220deg, $primary, rgba($primary, 0.5));
-    border-radius: $borderRadius calc(#{$borderRadius} * 10);
+  @media screen and (max-width: $phone) {
+    display: grid;
+    grid-template-rows: 100vh repeat(5, min-content);
+    grid-template-columns:
+      [full-start] 2rem
+      [center-start] repeat(8, 1fr)
+      [center-end] 2rem
+      [full-end];
   }
 }
