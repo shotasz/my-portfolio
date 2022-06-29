@@ -59,8 +59,8 @@ export function Contact() {
   if (requestStatus === "pending") {
     notification = {
       status: "pending",
-      title: "送信中",
-      message: "あなたのメッセージを送信しています",
+      title: "送信",
+      message: "メッセージ送信しています",
     };
   }
 
@@ -68,7 +68,7 @@ export function Contact() {
     notification = {
       status: "success",
       title: "成功",
-      message: "あなたのメッセージが送信されました",
+      message: "メッセージ送信されました",
     };
   }
 
@@ -76,7 +76,7 @@ export function Contact() {
     notification = {
       status: "error",
       title: "失敗",
-      message: "送信中にエラーが発生しました",
+      message: "送信中にエラー発生しました",
     };
   }
 
@@ -90,7 +90,7 @@ export function Contact() {
       <form className={styles.form} onSubmit={sendMessageHandler}>
         <div className={styles.controls}>
           <div className={styles.control}>
-            <label htmlFor="email">Your Email</label>
+            <label htmlFor="email">Email</label>
             <input
               type="email"
               id="email"
@@ -100,7 +100,7 @@ export function Contact() {
             />
           </div>
           <div className={styles.control}>
-            <label htmlFor="name">Your Name</label>
+            <label htmlFor="name">Name</label>
             <input
               type="text"
               id="name"
@@ -111,7 +111,7 @@ export function Contact() {
           </div>
         </div>
         <div className={styles.control}>
-          <label htmlFor="message">Your Message</label>
+          <label htmlFor="message">Message</label>
           <textarea
             id="message"
             rows="5"
