@@ -1,41 +1,3 @@
-export function scrollToSection(entry) {
-  const getSection = entry.target.closest("a").getAttribute("section");
-
-  const scrollTo = () => {
-    document
-      .querySelector(`#${getSection}`)
-      .scrollIntoView({ behavior: "smooth" });
-  };
-
-  scrollTo();
-}
-
-export function stickyNavHandler() {
-  const hero = document.querySelector("#hero");
-  const nav = document.querySelector("header");
-  const navHeight = nav.getBoundingClientRect().height;
-
-  const stickyNav = (entries) => {
-    const [entry] = entries;
-
-    if (!entry.isIntersecting) {
-      nav.style.position = "fixed";
-    } else {
-      nav.style.position = "absolute";
-    }
-  };
-
-  const headerObserver = new IntersectionObserver(stickyNav, {
-    root: null,
-    threshold: 0,
-    rootMargin: `-${navHeight}px`,
-  });
-
-  headerObserver.observe(hero);
-}
-
-///////////////////////////////////////////////////////////////
-
 export function revealSectionHandler() {
   const allSections = document.querySelectorAll("section");
 
@@ -66,5 +28,3 @@ export function revealSectionHandler() {
     // section.style.transform = "translateY(0)";
   });
 }
-
-///////////////////////////////////////////////////////////////
