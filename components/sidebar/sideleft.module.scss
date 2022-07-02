@@ -79,8 +79,8 @@
 }
 
 .active {
-  border-bottom: 0.7rem;
-  border-bottom: 3px solid var(--color-green);
+  border-bottom: 2px solid var(--color-green);
+  border-radius: 2px;
 
   svg {
     color: var(--color-green);

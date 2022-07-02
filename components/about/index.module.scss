@@ -166,6 +166,9 @@
       grid-column: 1 / -1;
       grid-row: 1 / 2;
     }
+    @media screen and (max-width: $phone) {
+      font-size: 2.2rem;
+    }
   }
 
   // @media screen and (max-width: $phone) {

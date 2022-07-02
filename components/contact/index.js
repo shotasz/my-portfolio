@@ -94,6 +94,7 @@ export function Contact() {
             <input
               type="email"
               id="email"
+              placeholder="アドレスを入力して下さい"
               required
               value={enteredEmail}
               onChange={(event) => setEnteredEmail(event.target.value)}
@@ -104,6 +105,7 @@ export function Contact() {
             <input
               type="text"
               id="name"
+              placeholder="名前を入力して下さい"
               required
               value={enteredName}
               onChange={(event) => setEnteredName(event.target.value)}
@@ -115,6 +117,7 @@ export function Contact() {
           <textarea
             id="message"
             rows="5"
+            placeholder="メッセージを入力して下さい"
             required
             value={enteredMessage}
             onChange={(event) => setEnteredMessage(event.target.value)}

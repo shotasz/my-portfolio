@@ -63,7 +63,7 @@
       justify-content: center;
       align-items: center;
       text-align: center;
-      background: rgba($dark, 0.9);
+      background: rgba($dark, 1);
       backdrop-filter: blur(2px);
       transform: translate(0);
       transition: 0.3s ease transform;
@@ -149,5 +149,6 @@
 
 .active {
   padding-bottom: 1rem;
-  border-bottom: 3px solid var(--color-green);
+  border-bottom: 2px solid var(--color-green);
+  border-radius: 2px;
 }

@@ -1,4 +1,4 @@
-import { MongoClient } from "mongodb";
+import { connectToDatabase } from "../../../util/mongodb";
 
 async function handler(req, res) {
   if (req.method === "POST") {
@@ -22,23 +22,13 @@ async function handler(req, res) {
       message,
     };
 
-    let client;
-
-    const connectionString = process.env.MONGODB_URI;
-
-    try {
-      client = await MongoClient.connect(connectionString);
-    } catch (error) {
-      res.status(500).json({ message: "Could not connect to database." });
-      return;
-    }
-
-    const db = client.db();
+    const { client, db } = await connectToDatabase();
 
     try {
       const result = await db
         .collection(process.env.MONGODB_DB_MESSAGES)
         .insertOne(newMessage);
+
       newMessage.id = result.insertedId;
     } catch (error) {
       client.close();
