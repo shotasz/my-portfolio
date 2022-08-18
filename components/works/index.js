@@ -15,7 +15,7 @@ export function Works() {
       <div className={styles.work}>
         <div className={styles.image}>
           <Image
-            src="/shota-ecommerce.png"
+            src="/recipe-app.png"
             width={600}
             height={410}
             quality="85"
@@ -26,35 +26,30 @@ export function Works() {
           <h4>Featured Project</h4>
           <a
             className={styles.link}
-            href="https://shota-ecommerce.vercel.app"
+            href="https://food-app-ebon.vercel.app"
             target="_blank"
           >
-            <h3>E-Commerce App</h3>
+            <h3>FoodRecipe App</h3>
           </a>
 
           <p>
-            アパレルブランドのECコマース。 Shopify graphQL
-            APIを使って、Shopifyの管理画面で一般的な機能の備わったECサイト。
+            ヘッドレスCMSのSanityAPIを使用したレシピアプリ。CRUDの4機能の備わった管理画面を実装した他にAuth機能も完備。
           </p>
 
           <ul>
             <li>Next.js</li>
-            <li>Typescript</li>
-            <li>TailwindCSS</li>
-            <li>Shopify graphQL API</li>
+            <li>Sanity API</li>
+            <li>Google Auth</li>
           </ul>
 
           <div className={styles.icons}>
             <div>
-              <a
-                href="https://github.com/shotasz/shota-ecommerce"
-                target="_blank"
-              >
+              <a href="https://github.com/shotasz/food-app" target="_blank">
                 <IconGithub />
               </a>
             </div>
             <div>
-              <a href="https://shota-ecommerce.vercel.app" target="_blank">
+              <a href="https://food-app-ebon.vercel.app" target="_blank">
                 <IconLink />
               </a>
             </div>
