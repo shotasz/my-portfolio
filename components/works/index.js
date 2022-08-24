@@ -33,7 +33,7 @@ export function Works() {
           </a>
 
           <p>
-            ヘッドレスCMSのSanityAPIを使用したレシピアプリ。CRUDの4機能の備わった管理画面を実装した他にAuth機能も完備。
+            ヘッドレスCMSのSanityAPIを使用したレシピアプリ。CRUDの4機能+Auth機能の備わった管理画面でユーザーがレシピを書き留めておけるアプリととなっています。
           </p>
 
           <ul>
