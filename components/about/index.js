@@ -14,11 +14,11 @@ export function About() {
           ポートフォリオをご覧頂きありがとうございます。
           <br />
           <i>S</i>hota<i>S</i>uzukiと申します。
-          2年ほど前、UDEMYという動画学習サービスで<i>VBA</i>
-          のコースを受講。当時、勤めていた会社の企画部に配属され、
-          少しでも残業時間を減らし、業務の効率化を図るためこの技術を選択。
-          時間はかかったものの、シンプルな機能の受注管理システムや在庫管理表が自分の自信にもなり、プログラミングを知るきっかけに。
-          これを受け、自分のスキルを高めるともに社会に貢献できる仕事に憧れ、学習時間確保のため環境を変え、現在独学でフロント系の技術を学習しています。
+          5年前、当時勤めていた会社の企画部に配属され、
+          少しでも残業時間を減らし業務の効率化を図るため、<i>VBA</i>を使って
+          シンプルな受注管理システムや在庫管理表を作成しました。
+          これをきっかけに自分のスキルを高めるともに社会に貢献できる仕事に憧れ、
+          エンジニアを目指しました。
         </p>
       </div>
       <span className={styles.about__p_end}>&lt;/p&gt;</span>
@@ -26,17 +26,16 @@ export function About() {
       <div className={styles.content}>
         <h4>こんな技術に触れています...</h4>
         <p>
-          主に<i>React</i>
-          をメインに開発を進めていて、フレームワークは
-          <i>Nextjs</i>
-          を使っています。 このポートフォリオはそれらの技術に加え、
-          <i>Sass</i>、DBには<i>mongoDB</i>を使い、デプロイは<i>Vercel</i>
-          を使っています。
+          主に<i>React</i>をメインに開発しています。
+          こちらのポートフォリオもFWは
+          <i>Nextjs</i>、 スタイルに<i>Sass</i>
+          、お問い合わせには<i>resend</i>を使い、デプロイは
+          <i>Vercel</i>の構成です。
           <br />
           他にもバックエンドに
-          <i>Sanity</i>、フロントに<i>Typescript</i>、<i>React</i>、
-          <i>TailwindCSS</i>、フレームワークは<i>Nextjs</i>
-          を使って今まで学習した集大成のレシピアプリをポートフォリオ用に開発しました。
+          <i>Sanity</i>、フロントエンドに<i>Typescript</i>、<i>React</i>、
+          <i>TailwindCSS</i>、<i>Nextjs</i>
+          を使って、今まで学習した集大成のレシピアプリをポートフォリオ用に開発しました。
           URL、Githubも確認できますので、良かったら見てみて下さい。
         </p>
         <div className={styles.image}>
@@ -46,6 +45,7 @@ export function About() {
             height={270}
             quality="85"
             priority={true}
+            alt="user_image"
           />
         </div>
       </div>

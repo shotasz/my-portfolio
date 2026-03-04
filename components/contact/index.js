@@ -90,7 +90,7 @@ export function Contact() {
       <form className={styles.form} onSubmit={sendMessageHandler}>
         <div className={styles.controls}>
           <div className={styles.control}>
-            <label htmlFor="email">Email</label>
+            <label htmlFor="email">Your Email</label>
             <input
               type="email"
               id="email"
@@ -101,7 +101,7 @@ export function Contact() {
             />
           </div>
           <div className={styles.control}>
-            <label htmlFor="name">Name</label>
+            <label htmlFor="name">Your Name</label>
             <input
               type="text"
               id="name"
@@ -125,7 +125,7 @@ export function Contact() {
         </div>
 
         <div className={styles.actions}>
-          <button className={styles.btn}>SEND MAIL</button>
+          <button className={styles.btn}>Send email to me ✉️</button>
         </div>
       </form>
       {notification && (

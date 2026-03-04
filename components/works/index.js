@@ -20,6 +20,7 @@ export function Works() {
             height={410}
             quality="85"
             priority={true}
+            alt="recipe_app"
           />
         </div>
         <div className={styles.content}>
