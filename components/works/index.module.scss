@@ -90,6 +90,7 @@
   grid-template-rows: repeat(6, 1fr);
   align-items: center;
   transition: var(--transition);
+  max-width: 140rem;
 
   @media screen and (max-width: $phoneWide) {
     &:hover {

@@ -104,6 +104,7 @@
   letter-spacing: 2px;
   line-height: 3rem;
   padding: 2rem;
+  max-width: 140rem;
 
   @include paragraph;
 
@@ -129,6 +130,7 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
   grid-gap: 2rem;
+  max-width: 140rem;
 
   @media screen and (max-width: $phoneWide) {
     padding: 0;

@@ -11,8 +11,8 @@ function SkillsList(props) {
           <img alt={description} src={icon} />
         </div>
         <p className={styles.title}>{skill}</p>
-        <BoxContainer selectColor={color} selectPercent={percent} />
-        <p className={styles.percent}>{percent}</p>
+        {/* <BoxContainer selectColor={color} selectPercent={percent} />
+        <p className={styles.percent}>{percent}</p> */}
       </figure>
     </li>
   );

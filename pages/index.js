@@ -1,3 +1,4 @@
+import { Fragment, useEffect, useState } from "react";
 import { Hero } from "../components/hero";
 import { SideLeft } from "../components/sidebar/sideleft";
 import { SideRight } from "../components/sidebar/sideright";
@@ -6,24 +7,28 @@ import { Skills } from "../components/skills";
 import { Works } from "../components/works";
 import { Contact } from "../components/contact";
 import { Footer } from "../components/footer";
-
 import { connectToDatabase } from "../util/mongodb";
-import { Fragment } from "react";
+import { getSkills } from "../util/skills";
 
-export async function getServerSideProps() {
-  const { db } = await connectToDatabase();
+// export async function getServerSideProps() {
+//   const { db } = await connectToDatabase();
 
-  const data = await db.collection("data").find().toArray();
+//   const data = await db.collection("data").find().toArray();
 
-  return {
-    props: {
-      data: JSON.parse(JSON.stringify(data)),
-    },
-  };
-}
+//   return {
+//     props: {
+//       data: JSON.parse(JSON.stringify(data)),
+//     },
+//   };
+// }
 
-export default function Home({ data }) {
-  const [items] = data;
+export default function Home() {
+  const [data, setData] = useState("");
+  const items = getSkills();
+
+  useEffect(() => {
+    setData(items);
+  });
 
   return (
     <Fragment>
@@ -35,7 +40,7 @@ export default function Home({ data }) {
 
       <About />
 
-      <Skills items={items.skills} />
+      <Skills items={data.skills} />
 
       <Works />
 

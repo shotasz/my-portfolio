@@ -18,7 +18,7 @@ export function Skills({ items }) {
       <ul>
         {data &&
           data.map((item, index) => {
-            if (index <= 2) {
+            if (index <= 3) {
               return (
                 <SkillsList
                   key={item.id}
@@ -33,7 +33,7 @@ export function Skills({ items }) {
           })}
         {visible &&
           data.map((item, index) => {
-            if (index >= 3) {
+            if (index >= 4) {
               return (
                 <SkillsList
                   key={item.id}
@@ -46,6 +46,7 @@ export function Skills({ items }) {
               );
             }
           })}
+        {visible && <span className={styles.and_more}>and more..</span>}
       </ul>
       {!visible && (
         <button
